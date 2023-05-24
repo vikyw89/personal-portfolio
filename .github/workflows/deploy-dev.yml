@@ -31,8 +31,8 @@ jobs:
       - name: Export static files
         run: |
           cd client
-          npm run export
-          mv out/404/index.html out/404.html
+          npm run build
+        # mv out/404/index.html out/404.html
       - name: Disable Jekyll
         run: |
           cd client
