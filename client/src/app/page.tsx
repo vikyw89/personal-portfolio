@@ -1,14 +1,16 @@
-'use client'
+"use client"
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function Home() {
 
   return (
     <main className="content flex flex-col w-full min-h-full items-center relative">
-      <div>
-        Hello... I'm Viky !
-      </div>
+      <motion.div
+        whileHover={{ scale: 6 }}>
+        test
+      </motion.div>
+      test
     </main>
   )
 }
