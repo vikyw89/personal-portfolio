@@ -23,6 +23,96 @@ export default function Home() {
         >
           HELLO
         </motion.div>
+        <motion.div
+          animate={{
+            x: [-200, 1000],
+            opacity: [100, 100]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          className='text-9xl font-bold opacity-0 text-neutral-content'
+        >
+          HELLO
+        </motion.div>
+        <motion.div
+          animate={{
+            x: [-300, 1000],
+            opacity: [100, 100]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          className='text-9xl font-bold opacity-0 text-neutral-content'
+        >
+          HELLO
+        </motion.div>
+        <motion.div
+          animate={{
+            x: [-400, 1000],
+            opacity: [100, 100]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          className='text-9xl font-bold opacity-0 text-neutral-content'
+        >
+          HELLO
+        </motion.div>
+        <motion.div
+          animate={{
+            x: [1000, -500],
+            opacity: [100, 100]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          className='text-9xl font-bold opacity-0 text-neutral-content'
+        >
+          HELLO
+        </motion.div>
+        <motion.div
+          animate={{
+            x: [-500, 1000],
+            opacity: [100, 100]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          className='text-9xl font-bold opacity-0 text-neutral-content'
+        >
+          HELLO
+        </motion.div>
+        <motion.div
+          animate={{
+            x: [1000, -500],
+            opacity: [100, 100]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          className='text-9xl font-bold opacity-0 text-neutral-content'
+        >
+          HELLO
+        </motion.div>
       </div>
       <div className='focus fixed z-10'>
         <motion.div
