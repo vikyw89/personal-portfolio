@@ -10,7 +10,7 @@ export default function Home() {
       <div className='background fixed -z-10 top-0 right-0 bottom-0 left-0 bg-neutral'>
         <motion.div
           animate={{
-            x: [-100, 1000],
+            x: [-1000, 1000,1000,2000],
             opacity: [100, 100]
           }}
           transition={{
@@ -25,7 +25,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [-200, 1000],
+            x: [-2000, 1000,1000,2000],
             opacity: [100, 100]
           }}
           transition={{
@@ -40,7 +40,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [-300, 1000],
+            x: [-3000, 1000,1000,2000],
             opacity: [100, 100]
           }}
           transition={{
@@ -55,7 +55,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [-400, 1000],
+            x: [-4000, 1000,1000,2000],
             opacity: [100, 100]
           }}
           transition={{
@@ -70,7 +70,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [1000, -500],
+            x: [1000, -500,-500,-1000],
             opacity: [100, 100]
           }}
           transition={{
@@ -85,7 +85,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [-500, 1000],
+            x: [-500, 1000,1000,2000],
             opacity: [100, 100]
           }}
           transition={{
@@ -100,7 +100,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [1000, -500],
+            x: [1000, -500,-500,-1000],
             opacity: [100, 100]
           }}
           transition={{
@@ -115,15 +115,32 @@ export default function Home() {
         </motion.div>
       </div>
       <div className='focus fixed z-10'>
-        <motion.div
+        {/* <motion.div
           whileHover={{ scale: 6 }}>
           Hello I&apos;m Viky
-        </motion.div>
+        </motion.div> */}
       </div>
       <div className='foreground fixed z-20'>
         <motion.div
           animate={{
             y: [-1000, 1000],
+            x:[-200, -200],
+            opacity: [100, 100]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          className='text-9xl font-bold opacity-0 [writing-mode:vertical-lr] text-neutral-focus'
+        >
+          HELLO
+        </motion.div>
+        <motion.div
+          animate={{
+            y: [1000, -1000],
+            x:[-400, -400],
             opacity: [100, 100]
           }}
           transition={{
@@ -141,7 +158,7 @@ export default function Home() {
       <div>
         Works
       </div> */}
-      <ProjectCardContainer />
+      {/* <ProjectCardContainer /> */}
     </main>
   )
 }
