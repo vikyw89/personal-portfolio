@@ -10,7 +10,82 @@ export default function Home() {
       <div className='background fixed -z-10 top-0 right-0 bottom-0 left-0 bg-neutral'>
         <motion.div
           animate={{
-            x: [-1000, 1000,1000,2000],
+            x: [-1000, 1000, 1000, 2000],
+            opacity: [100, 100]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          className='text-9xl font-bold opacity-0 text-neutral-content'
+        >
+          こんにちは
+        </motion.div>
+        <motion.div
+          animate={{
+            x: [-2000, 1000, 1000, 2000],
+            opacity: [100, 100]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          className='text-9xl font-bold opacity-0 text-neutral-content'
+        >
+          Halo
+        </motion.div>
+        <motion.div
+          animate={{
+            x: [-3000, 1000, 1000, 2000],
+            opacity: [100, 100]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          className='text-9xl font-bold opacity-0 text-neutral-content'
+        >
+          Bonjour
+        </motion.div>
+        <motion.div
+          animate={{
+            x: [-4000, 1000, 1000, 2000],
+            opacity: [100, 100]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          className='text-9xl font-bold opacity-0 text-neutral-content'
+        >
+          Hola
+        </motion.div>
+        <motion.div
+          animate={{
+            x: [2000, -500, -500, -1000],
+            opacity: [100, 100]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          className='text-9xl font-bold opacity-0 text-neutral-content'
+        >
+          你好
+        </motion.div>
+        <motion.div
+          animate={{
+            x: [-500, 1000, 1000, 2000],
             opacity: [100, 100]
           }}
           transition={{
@@ -25,82 +100,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [-2000, 1000,1000,2000],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 text-neutral-content'
-        >
-          HELLO
-        </motion.div>
-        <motion.div
-          animate={{
-            x: [-3000, 1000,1000,2000],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 text-neutral-content'
-        >
-          HELLO
-        </motion.div>
-        <motion.div
-          animate={{
-            x: [-4000, 1000,1000,2000],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 text-neutral-content'
-        >
-          HELLO
-        </motion.div>
-        <motion.div
-          animate={{
-            x: [2000, -500,-500,-1000],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 text-neutral-content'
-        >
-          HELLO
-        </motion.div>
-        <motion.div
-          animate={{
-            x: [-500, 1000,1000,2000],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 text-neutral-content'
-        >
-          HELLO
-        </motion.div>
-        <motion.div
-          animate={{
-            x: [2000, -500,-500,-1000],
+            x: [2000, -500, -500, -1000],
             opacity: [100, 100]
           }}
           transition={{
@@ -124,7 +124,7 @@ export default function Home() {
         <motion.div
           animate={{
             y: [-1000, 1000],
-            x:[-200, -200],
+            x: [-200, -200],
             opacity: [100, 100]
           }}
           transition={{
@@ -140,7 +140,7 @@ export default function Home() {
         <motion.div
           animate={{
             y: [1000, -1000],
-            x:[-400, -400],
+            x: [-400, -400],
             opacity: [100, 100]
           }}
           transition={{
