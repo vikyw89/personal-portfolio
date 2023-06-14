@@ -70,7 +70,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [1000, -500,-500,-1000],
+            x: [2000, -500,-500,-1000],
             opacity: [100, 100]
           }}
           transition={{
@@ -100,7 +100,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [1000, -500,-500,-1000],
+            x: [2000, -500,-500,-1000],
             opacity: [100, 100]
           }}
           transition={{
