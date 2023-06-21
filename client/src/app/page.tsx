@@ -1,16 +1,30 @@
 "use client"
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ProjectCardContainer } from './projectCardContainer'
+import { ProjectCardContainer } from './projectCardContainer.tsx'
+import { useEffect, useState } from 'react'
+
+
 
 export default function Home() {
+  // get screen width
+  const [width, setWidth] = useState(0)
+  const [data, setData] = useState()
+  console.log("🚀 ~ file: page.tsx:13 ~ Home ~ data:", data)
+
+
+  useEffect(() => {
+    const screenWidth = window.screen.width
+    setWidth(screenWidth)
+  }, [])
+
 
   return (
     <main className="content flex flex-col w-full min-h-full items-center relative">
       <div className='background fixed -z-10 top-0 right-0 bottom-0 left-0 bg-neutral'>
         <motion.div
           animate={{
-            x: [-1000, 1000, 1000, 2000],
+            x: [width, 0 - width],
             opacity: [100, 100]
           }}
           transition={{
@@ -25,22 +39,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [-2000, 1000, 1000, 2000],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 text-neutral-content'
-        >
-          Halo
-        </motion.div>
-        <motion.div
-          animate={{
-            x: [-3000, 1000, 1000, 2000],
+            x: [0 - width, width],
             opacity: [100, 100]
           }}
           transition={{
@@ -55,7 +54,22 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [-4000, 1000, 1000, 2000],
+            x: [width, 0 - width],
+            opacity: [100, 100]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+          className='text-9xl font-bold opacity-0 text-neutral-content'
+        >
+          Halo
+        </motion.div>
+        <motion.div
+          animate={{
+            x: [0 - width, width],
             opacity: [100, 100]
           }}
           transition={{
@@ -70,7 +84,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [2000, -500, -500, -1000],
+            x: [width, 0 - width],
             opacity: [100, 100]
           }}
           transition={{
@@ -85,7 +99,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [-500, 1000, 1000, 2000],
+            x: [0 - width, width],
             opacity: [100, 100]
           }}
           transition={{
@@ -100,7 +114,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           animate={{
-            x: [2000, -500, -500, -1000],
+            x: [width, 0 - width],
             opacity: [100, 100]
           }}
           transition={{
@@ -111,7 +125,7 @@ export default function Home() {
           }}
           className='text-9xl font-bold opacity-0 text-neutral-content'
         >
-          HELLO
+          Hello
         </motion.div>
       </div>
       <div className='focus fixed z-10'>
