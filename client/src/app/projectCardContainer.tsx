@@ -4,6 +4,7 @@ import Image from "next/image"
 export const ProjectCardContainer = () => {
     return (
         <div className="grid grid-cols-2 overflow-y-scroll overflow-x-hidden">
+            Test
             <motion.div className="aspect-square"
                 whileInView={{ scale: 1 }}
                 initial={{ scale: 0 }}
