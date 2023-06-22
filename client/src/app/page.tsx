@@ -5,7 +5,7 @@ import { ForegroundComponent } from './foreground.tsx'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
-const textContent = [`I'm Viky`, `I'm a full-stack developer`, `I like creating things`, `I like exploring technologies`, `I'm a self learner`, `I enjoy solving problem`]
+const textContent = [`Hello there...`, `I'm Viky`, `I'm a full-stack developer`, `I like creating things`, `I like exploring technologies`, `I'm a self learner`, `I enjoy solving problem`]
 
 export default function Home() {
   const [screenHeight, setScreenHeight] = useState(0)
@@ -18,12 +18,12 @@ export default function Home() {
       <BackgroundComponent />
       <div className='focus z-10'>
         <motion.div
-          className="text-neutral-content text-3xl p-10"
+          className="text-base-content text-3xl p-10"
         >
           {textContent.map((e, i) => {
             return <motion.div
               initial={{ display: 'none' }}
-              animate={{ opacity: [0, 100, 100, 0] }}
+              animate={{ opacity: [0, 100, 100, 0], display: 'block' }}
               exit={{ display: 'none' }}
               transition={{
                 delay: i * 2,

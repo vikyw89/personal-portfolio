@@ -1,14 +1,15 @@
 "use client"
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import { motion } from 'framer-motion';
 
 import { useState } from 'react';
 
-const themeOptions = ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"]
+const themeOptions = ["march","light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"]
 const themeQty = themeOptions.length
 
 export const HeaderComponent = () => {
-    const [themeIndex, setThemeIndex] = useState(9)
+    const [themeIndex, setThemeIndex] = useState(0)
     const [menuIsOpen, setMenuIsOpen] = useState(false)
 
     const menuClickHandler = (e: any) => {
@@ -32,8 +33,8 @@ export const HeaderComponent = () => {
     }
     return (
         <div>
-            <div className="flex fixed top-0 w-full bg-base-300 bg-opacity-50 backdrop-blur-sm z-10 shadow-2xl">
-                <button className='btn btn-square bg-inherit' onClick={menuClickHandler}>
+            <div className="flex fixed top-0 w-full bg-primary bg-opacity-50 backdrop-blur-sm z-10 shadow-2xl">
+                <button className='btn btn-square bg-opacity-0 border-0 shadow-sm z-20' onClick={menuClickHandler}>
                     {menuIsOpen &&
                         <MenuOpenIcon />
                     }
@@ -43,7 +44,11 @@ export const HeaderComponent = () => {
                 </button>
             </div>
             {menuIsOpen &&
-                <div id="menuPopUp" className='z-50 fixed top-0 left-0 bottom-0 right-0 flex' onClick={closeMenu}>
+                <motion.div
+                animate={{
+                    x:[-50,-5]
+                }}
+                id="menuPopUp" className='z-50 fixed top-0 left-0 bottom-0 right-0 flex' onClick={closeMenu}>
                     <div className='flex flex-col bg-opacity-50 p-10 font-bold bg-neutral-focus backdrop-blur-md shadow-2xl'>
                         <ul className='flex flex-col gap-5'>
                             <li><a>Download Resume</a></li>
@@ -52,10 +57,10 @@ export const HeaderComponent = () => {
                             <li><a onClick={toggleTheme}>Theme Switcher</a><p>{themeOptions[themeIndex]}</p></li>
                         </ul>
                     </div>
-                </div>
+                </motion.div>
             }
             <div>
-                <button className='btn btn-square bg-neutral' onClick={menuClickHandler}>
+                <button className='btn btn-square opacity-0' onClick={menuClickHandler}>
                     {menuIsOpen &&
                         <MenuOpenIcon />
                     }

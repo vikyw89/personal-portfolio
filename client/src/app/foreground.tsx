@@ -10,12 +10,11 @@ export const ForegroundComponent = () => {
         setHeight(screenHeight)
     }, [])
     return (
-        <div className='foreground fixed z-20'>
+        <div className='foreground fixed z-10'>
             <motion.div
                 animate={{
                     y: [-height, height + 1000],
-                    x: [-200, -200],
-                    opacity: [100, 100]
+                    x: [-200, -200]
                 }}
                 transition={{
                     duration: Math.random() * 20 + 10,
@@ -23,7 +22,7 @@ export const ForegroundComponent = () => {
                     repeat: Infinity,
                     repeatDelay: 2
                 }}
-                className='text-9xl font-bold opacity-0 [writing-mode:vertical-lr] text-neutral-focus'
+                className='text-9xl font-bold opacity-0 [writing-mode:vertical-lr] text-base-content'
             >
                 hello
             </motion.div>
@@ -31,7 +30,6 @@ export const ForegroundComponent = () => {
                 animate={{
                     y: [height + 1000, -height],
                     x: [-400, -400],
-                    opacity: [100, 100]
                 }}
                 transition={{
                     duration: Math.random() * 20 + 10,
@@ -39,7 +37,7 @@ export const ForegroundComponent = () => {
                     repeat: Infinity,
                     repeatDelay: 2
                 }}
-                className='text-9xl font-bold opacity-0 [writing-mode:vertical-lr] text-neutral-focus'
+                className='text-9xl font-bold [writing-mode:vertical-lr] text-base-content'
             >
                 goodbye
             </motion.div>

@@ -8,112 +8,120 @@ export const BackgroundComponent = () => {
         const screenWidth = window.screen.width
         setWidth(screenWidth)
     }, [])
+
     return (
-        <div className='background fixed -z-10 top-0 right-0 bottom-0 left-0 bg-neutral opacity-20'>
+        <div className='background fixed -z-10 top-0 right-0 bottom-0 left-0 opacity-25'>
             <motion.div
-                animate={{
-                    x: [width, 0 - width],
-                    opacity: [100, 100]
+                initial={{
+                    opacity: 0
                 }}
-                transition={{
-                    duration: Math.random()*20 + 10,
-                    ease: "easeInOut",
-                    repeat: Infinity,
-                    repeatDelay: 2
-                }}
-                className='text-9xl font-bold opacity-0 text-neutral-content'
-            >
-                こんにちは
-            </motion.div>
-            <motion.div
                 animate={{
                     x: [0 - width, width],
                     opacity: [100, 100]
                 }}
                 transition={{
-                    duration: Math.random()*20 + 10,
-                    ease: "easeInOut",
+                    duration: Math.random() * 20 + 10,
                     repeat: Infinity,
-                    repeatDelay: 2
                 }}
-                className='text-9xl font-bold opacity-0 text-neutral-content'
+                className='text-9xl font-bold text-neutral-content'
             >
                 Bonjour
             </motion.div>
             <motion.div
+                initial={{
+                    opacity: 0
+                }}
                 animate={{
                     x: [width, 0 - width],
                     opacity: [100, 100]
                 }}
                 transition={{
-                    duration: Math.random()*20 + 10,
-                    ease: "easeInOut",
+                    duration: Math.random() * 20 + 10,
                     repeat: Infinity,
-                    repeatDelay: 2
                 }}
-                className='text-9xl font-bold opacity-0 text-neutral-content'
+                className='text-9xl font-bold text-neutral-content'
             >
-                Halo
+                Aloha
             </motion.div>
             <motion.div
+                initial={{
+                    opacity: 0
+                }}
                 animate={{
                     x: [0 - width, width],
                     opacity: [100, 100]
                 }}
                 transition={{
-                    duration: Math.random()*20 + 10,
-                    ease: "easeInOut",
+                    duration: Math.random() * 20 + 10,
                     repeat: Infinity,
-                    repeatDelay: 2
                 }}
-                className='text-9xl font-bold opacity-0 text-neutral-content'
+                className='text-9xl font-bold text-neutral-content'
             >
-                Hola
+                Hei
             </motion.div>
             <motion.div
+                initial={{
+                    opacity: 0
+                }}
                 animate={{
                     x: [width, 0 - width],
                     opacity: [100, 100]
                 }}
                 transition={{
-                    duration: Math.random()*20 + 10,
-                    ease: "easeInOut",
+                    duration: Math.random() * 20 + 10,
                     repeat: Infinity,
-                    repeatDelay: 2
                 }}
-                className='text-9xl font-bold opacity-0 text-neutral-content'
+                className='text-9xl font-bold text-neutral-content'
             >
                 你好
             </motion.div>
             <motion.div
+                initial={{
+                    opacity: 0
+                }}
                 animate={{
                     x: [0 - width, width],
                     opacity: [100, 100]
                 }}
                 transition={{
-                    duration: Math.random()*20 + 10,
-                    ease: "easeInOut",
+                    duration: Math.random() * 20 + 10,
                     repeat: Infinity,
-                    repeatDelay: 2
                 }}
-                className='text-9xl font-bold opacity-0 text-neutral-content'
+                className='text-9xl font-bold text-neutral-content'
             >
                 Hello
             </motion.div>
             <motion.div
+                initial={{
+                    opacity: 0
+                }}
                 animate={{
                     x: [width, 0 - width],
                     opacity: [100, 100]
                 }}
                 transition={{
-                    duration: Math.random()*20 + 10,
-                    ease: "easeInOut",
+                    duration: Math.random() * 20 + 10,
                     repeat: Infinity,
-                    repeatDelay: 2
                 }}
-                className='text-9xl font-bold opacity-0 text-neutral-content'
+                className='text-9xl font-bold text-neutral-content'
             >
-                Hello
+                Hola
+            </motion.div>
+            <motion.div
+                initial={{
+                    opacity: 0
+                }}
+                animate={{
+                    x: [width, 0 - width],
+                    opacity: [100, 100]
+                }}
+                transition={{
+                    duration: Math.random() * 20 + 10,
+                    repeat: Infinity,
+                }}
+                className='text-9xl font-bold text-neutral-content'
+            >
+                こんにちは
             </motion.div>
         </div>
     )

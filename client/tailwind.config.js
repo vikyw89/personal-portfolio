@@ -17,6 +17,27 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"],
+    themes: [{
+      march: {
+
+        "primary": "#5BCEFA",
+
+        "secondary": "#A8F6E0",
+
+        "accent": "#A8F6BA",
+
+        "neutral": "#A8DEF6",
+
+        "base-100": "#F6AAB9",
+
+        "info": "#96bfed",
+
+        "success": "#A8F6CF",
+
+        "warning": "#F6D9A8",
+
+        "error": "#F6A8AC",
+      },
+    }, "light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"],
   }
 }
