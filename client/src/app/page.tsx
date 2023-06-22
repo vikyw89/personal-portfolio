@@ -1,178 +1,56 @@
 "use client"
 import Image from 'next/image'
+import { BackgroundComponent } from './background.tsx'
+import { ForegroundComponent } from './foreground.tsx'
 import { motion } from 'framer-motion'
-import { ProjectCardContainer } from './projectCardContainer.tsx'
 import { useEffect, useState } from 'react'
 
-
+const textContent = [`I'm Viky`, `I'm a full-stack developer`, `I like creating things`, `I like exploring technologies`, `I'm a self learner`, `I enjoy solving problem`]
 
 export default function Home() {
-  // get screen width
-  const [width, setWidth] = useState(0)
-  const [data, setData] = useState()
-  console.log("🚀 ~ file: page.tsx:13 ~ Home ~ data:", data)
-
+  const [screenHeight, setScreenHeight] = useState(0)
 
   useEffect(() => {
-    const screenWidth = window.screen.width
-    setWidth(screenWidth)
+    setScreenHeight(window.screen.height)
   }, [])
-
-
   return (
-    <main className="content flex flex-col w-full min-h-full items-center relative">
-      <div className='background fixed -z-10 top-0 right-0 bottom-0 left-0 bg-neutral'>
+    <main className="content grid flex-1">
+      <BackgroundComponent />
+      <div className='focus z-10'>
         <motion.div
-          animate={{
-            x: [width, 0 - width],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 text-neutral-content'
+          className="text-neutral-content text-3xl p-10"
         >
-          こんにちは
-        </motion.div>
-        <motion.div
-          animate={{
-            x: [0 - width, width],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 text-neutral-content'
-        >
-          Bonjour
-        </motion.div>
-        <motion.div
-          animate={{
-            x: [width, 0 - width],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 text-neutral-content'
-        >
-          Halo
-        </motion.div>
-        <motion.div
-          animate={{
-            x: [0 - width, width],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 text-neutral-content'
-        >
-          Hola
-        </motion.div>
-        <motion.div
-          animate={{
-            x: [width, 0 - width],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 text-neutral-content'
-        >
-          你好
-        </motion.div>
-        <motion.div
-          animate={{
-            x: [0 - width, width],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 text-neutral-content'
-        >
-          HELLO
-        </motion.div>
-        <motion.div
-          animate={{
-            x: [width, 0 - width],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 text-neutral-content'
-        >
-          Hello
+          {textContent.map((e, i) => {
+            return <motion.div
+              initial={{ display: 'none' }}
+              animate={{ opacity: [0, 100, 100, 0] }}
+              exit={{ display: 'none' }}
+              transition={{
+                delay: i * 2,
+                duration: 2,
+              }}
+              key={i}
+              className='text-neutral-text'>
+              {Array.from(e).map((e, i) => {
+                return <motion.span
+                  key={i}
+                  transition={{
+                    delay: i,
+                  }}
+                >
+                  {e}
+                </motion.span>
+              })}
+            </motion.div>
+          })}
         </motion.div>
       </div>
-      <div className='focus fixed z-10'>
-        {/* <motion.div
-          whileHover={{ scale: 6 }}>
-          Hello I&apos;m Viky
-        </motion.div> */}
-      </div>
-      <div className='foreground fixed z-20'>
-        <motion.div
-          animate={{
-            y: [-1000, 1000],
-            x: [-200, -200],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 [writing-mode:vertical-lr] text-neutral-focus'
-        >
-          HELLO
-        </motion.div>
-        <motion.div
-          animate={{
-            y: [1000, -1000],
-            x: [-400, -400],
-            opacity: [100, 100]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          className='text-9xl font-bold opacity-0 [writing-mode:vertical-lr] text-neutral-focus'
-        >
-          HELLO
-        </motion.div>
-      </div>
+      <ForegroundComponent />
       {/* 
       <div>
         Works
       </div> */}
       {/* <ProjectCardContainer /> */}
-    </main>
+    </main >
   )
 }

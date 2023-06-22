@@ -31,3 +31,31 @@ body {
   padding: 0;
   /* outline: 1px solid yellow; */
 }
+
+/* design related */
+
+/* add on to anchor tag */
+/* will add underline animation */
+a, a:link, a:visited {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px; /* The distance between text and underline */
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, white, white); /* underline color */
+  background-size: 0 2px; /* vertical size of underline */
+  background-repeat: no-repeat;
+  background-position: left bottom; /* start position of underline */
+  transition: background-size .3s ease-in; /* duration and timing style of animation */
+}
+
+a:hover::before {
+  background-size: 100% 2px;
+}
