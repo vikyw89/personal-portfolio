@@ -1,4 +1,5 @@
 import { motion, stagger } from "framer-motion"
+import { useEffect, useState } from "react"
 
 const introText = [
     `Hello`,
@@ -7,6 +8,10 @@ const introText = [
 ]
 
 export const IntroComponent = () => {
+    const [screenSize, setScreenSize] = useState<any>()
+    useEffect(() => {
+        setScreenSize({ h: window.screen.height, w: window.screen.width })
+    }, [])
     return (
         <div className="fixed inset-0 z-50 w-full h-full bg-black text-white font-bold mix-blend-multiply flex flex-col items-center justify-center ">
             <motion.div
@@ -24,14 +29,18 @@ export const IntroComponent = () => {
                     return (
                         <motion.div
                             initial={{
-                                opacity: 0
+                                x:-100,
+                                opacity: 0,
+                                color: 'black',
+                                backgroundColor: 'white'
                             }}
                             animate={{
+                                x:0,
                                 opacity: 1
                             }}
                             transition={{
                                 type: 'spring',
-                                stiffness: 2,
+                                stiffness: 10,
                                 delay: i * 2
                             }}
                             key={i}
