@@ -10,7 +10,7 @@ export const BackgroundComponent = () => {
     }, [])
 
     return (
-        <div className='background fixed -z-10 top-0 right-0 bottom-0 left-0 opacity-25'>
+        <div className='background fixed -z-10 inset-0 opacity-25 text-base-content'>
             <motion.div
                 initial={{
                     opacity: 0
@@ -23,7 +23,7 @@ export const BackgroundComponent = () => {
                     duration: Math.random() * 20 + 10,
                     repeat: Infinity,
                 }}
-                className='text-9xl font-bold text-neutral-content'
+                className='text-9xl font-bold'
             >
                 Bonjour
             </motion.div>
@@ -39,7 +39,7 @@ export const BackgroundComponent = () => {
                     duration: Math.random() * 20 + 10,
                     repeat: Infinity,
                 }}
-                className='text-9xl font-bold text-neutral-content'
+                className='text-9xl font-bold'
             >
                 Aloha
             </motion.div>
@@ -55,7 +55,7 @@ export const BackgroundComponent = () => {
                     duration: Math.random() * 20 + 10,
                     repeat: Infinity,
                 }}
-                className='text-9xl font-bold text-neutral-content'
+                className='text-9xl font-bold'
             >
                 Hei
             </motion.div>
@@ -71,7 +71,7 @@ export const BackgroundComponent = () => {
                     duration: Math.random() * 20 + 10,
                     repeat: Infinity,
                 }}
-                className='text-9xl font-bold text-neutral-content'
+                className='text-9xl font-bold'
             >
                 你好
             </motion.div>
@@ -87,7 +87,7 @@ export const BackgroundComponent = () => {
                     duration: Math.random() * 20 + 10,
                     repeat: Infinity,
                 }}
-                className='text-9xl font-bold text-neutral-content'
+                className='text-9xl font-bold'
             >
                 Hello
             </motion.div>
@@ -103,7 +103,7 @@ export const BackgroundComponent = () => {
                     duration: Math.random() * 20 + 10,
                     repeat: Infinity,
                 }}
-                className='text-9xl font-bold text-neutral-content'
+                className='text-9xl font-bold'
             >
                 Hola
             </motion.div>
@@ -119,7 +119,7 @@ export const BackgroundComponent = () => {
                     duration: Math.random() * 20 + 10,
                     repeat: Infinity,
                 }}
-                className='text-9xl font-bold text-neutral-content'
+                className='text-9xl font-bold'
             >
                 こんにちは
             </motion.div>
