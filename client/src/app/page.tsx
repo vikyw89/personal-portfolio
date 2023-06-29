@@ -11,13 +11,14 @@ const textContent = [`Hello there...`, `I'm Viky`, `I'm a full-stack developer`,
 
 export default function Home() {
   const [screenHeight, setScreenHeight] = useState(0)
+  const [intro, setIntro] = useState(true)
 
   useEffect(() => {
     setScreenHeight(window.screen.height)
   }, [])
   return (
     <main className="content grid flex-1">
-      <IntroComponent/>
+      {intro && <IntroComponent props={{ setIntro }} />}
       <BackgroundComponent />
       <ForegroundComponent />
     </main >
