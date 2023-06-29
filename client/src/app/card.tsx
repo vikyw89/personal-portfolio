@@ -16,10 +16,14 @@ export type CardProps = {
 
 export const Card = ({ props }: CardProps) => {
     const video: any = useRef(null)
-    const isInView = useInView(video)
-
+    const isInView = useInView(video, { amount: 1 })
+    
     useEffect(() => {
-        video.current.play()
+        if (isInView) {
+            video.current.play()
+        } else {
+            video.current.pause()
+        }
     }, [isInView])
 
     return (
