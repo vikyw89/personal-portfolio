@@ -50,7 +50,7 @@ const data = [
 
 export const ProjectCardContainer = () => {
     return (
-        <div className="grid overflow-y-scroll overflow-x-hidden gap-10">
+        <div className="grid overflow-y-scroll overflow-x-hidden gap-3">
             {data.map((v, i) => {
                 return (
                     <Card key={i} props={v} />

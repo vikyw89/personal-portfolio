@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useInView } from "framer-motion"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export type CardProps = {
     props: {
@@ -17,7 +17,7 @@ export type CardProps = {
 export const Card = ({ props }: CardProps) => {
     const video: any = useRef(null)
     const isInView = useInView(video, { amount: 1 })
-    
+
     useEffect(() => {
         if (isInView) {
             video.current.play()
@@ -27,25 +27,44 @@ export const Card = ({ props }: CardProps) => {
     }, [isInView])
 
     return (
-        <div className="aspect-auto w-full rounded-3xl z-20 backdrop-blur-sm p-5 bg-primary bg-opacity-20 shadow-sm">
+        <motion.div className="aspect-auto w-full z-20 grid text-base-content">
             <div className="relative w-full">
-                <motion.video preload="auto" className="aspect-auto w-full rounded-3xl" muted ref={video}
+                <motion.video preload="auto" className="aspect-auto w-full shadow-2xl" muted ref={video}
                 >
                     <source src={props.videoSrc} type="video/webm" />
                 </motion.video>
-                <div className="links flex gap-5 justify-between absolute bottom-0 w-full text-primary-content">
-                    <a className="bg-primary" href={props.liveLink}>Live</a>
-                    <a className="bg-primary" href={props.repoLink}>Repo</a>
-                </div>
+                <motion.div className="links inset-0 absolute flex flex-col items-end justify-between font-extrabold"
+                    initial={{
+                        x: 30
+                    }}
+                    whileInView={{
+                        x: 10
+                    }}
+                    transition={{
+                        type: 'spring',
+                        duration:1
+                    }}
+                >
+                    <a className="bg-info btn btn-square rounded-r-none bg-opacity-60 backdrop-blur-md flex-auto" href={props.liveLink}>
+                        <span className="-rotate-90 text-info-content">
+                            Live
+                        </span>
+                    </a>
+                    <a className="bg-info  btn btn-square rounded-r-none bg-opacity-60 backdrop-blur-md flex-auto" href={props.repoLink}>
+                        <span className="-rotate-90 text-info-content">
+                            Repo
+                        </span>
+                    </a>
+                </motion.div>
             </div>
-            <div className="description">
-                <div className="title font-bold">
+            <div className="description p-2">
+                <div className="title font-extrabold">
                     {props.title}
                 </div>
                 <div>
                     {props.description}
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
