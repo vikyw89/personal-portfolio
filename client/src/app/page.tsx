@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import Spline from '@splinetool/react-spline';
 import { IntroComponent } from './intro.tsx'
+import { ProjectCardContainer } from './projectCardContainer.tsx'
 
 const textContent = [`Hello there...`, `I'm Viky`, `I'm a full-stack developer`, `I like creating things`, `I like exploring technologies`, `I'm a self learner`, `I enjoy solving problem`]
 
@@ -18,9 +19,12 @@ export default function Home() {
   }, [])
   return (
     <main className="content grid flex-1">
-      {intro && <IntroComponent props={{ setIntro }} />}
+      {intro && <>
+        <IntroComponent props={{ setIntro }} />
+        <ForegroundComponent />
+      </>}
+      {!intro && <ProjectCardContainer />}
       <BackgroundComponent />
-      <ForegroundComponent />
     </main >
   )
 }

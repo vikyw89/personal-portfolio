@@ -16,16 +16,16 @@ export const IntroComponent = ({ props }: any) => {
 
     const removeIntro = () => {
         props.setIntro(false)
+        console.log('introRemoved')
     }
     return (
         <div className="fixed inset-0 z-50 w-full h-full bg-black text-white font-bold mix-blend-multiply flex flex-col items-center justify-center ">
             <motion.div
                 animate={{
-                    scale: [1, 1000],
+                    scale: [1, 10],
                 }}
                 transition={{
                     type: 'spring',
-                    stiffness: 2,
                     delay: introText.length * 3
                 }}
                 className="flex flex-col items-center justify-center"

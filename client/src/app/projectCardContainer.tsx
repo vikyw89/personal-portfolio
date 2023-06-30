@@ -20,7 +20,7 @@ const data = [
     },
     {
         title: `wheresWaldo`,
-        description: `desktop game of where's waldo`,
+        description: `desktop web game of where's waldo`,
         liveLink: 'https://whereswaldo-f62b8.firebaseapp.com/',
         repoLink: 'https://github.com/vikyw89/wheresWaldo',
         videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2Fwaldo.webm?alt=media&token=f11c4a60-bec3-40b3-9204-4c34edebae00'
@@ -50,7 +50,7 @@ const data = [
 
 export const ProjectCardContainer = () => {
     return (
-        <div className="grid overflow-y-scroll overflow-x-hidden gap-3">
+        <div className="grid overflow-y-scroll overflow-x-hidden gap-3 sm:grid-cols-8">
             {data.map((v, i) => {
                 return (
                     <Card key={i} props={v} />

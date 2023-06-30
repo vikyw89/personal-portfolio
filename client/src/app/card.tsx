@@ -16,7 +16,7 @@ export type CardProps = {
 
 export const Card = ({ props }: CardProps) => {
     const video: any = useRef(null)
-    const isInView = useInView(video, { amount: 1 })
+    const isInView = useInView(video, { amount: 0.01, margin:'-40%' })
 
     useEffect(() => {
         if (isInView) {
@@ -33,14 +33,18 @@ export const Card = ({ props }: CardProps) => {
     }
     return (
         <>
-            <motion.div className="aspect-auto w-full z-20 grid text-base-content"
+            <motion.div className="aspect-square w-full z-20 grid text-base-content"
                 initial={{
                     opacity: 0,
-                    scale: 0.8,
+                    scale: 0,
                 }}
                 whileInView={{
                     opacity: 1,
                     scale: 1,
+                }}
+                transition={{
+                    type:'spring',
+                    duration:1
                 }}
                 exit={{
                     opacity: 0,
@@ -50,11 +54,11 @@ export const Card = ({ props }: CardProps) => {
                 onViewportLeave={viewportLeaveHandler}
             >
                 <div className="relative w-full">
-                    <motion.video preload="auto" className="aspect-auto w-full shadow-2xl" muted ref={video}
+                    <motion.video preload="auto" className="aspect-square bg-primary bg-opacity-50 backdrop-blur-sm w-full shadow-2xl object-cover" muted loop ref={video}
                     >
                         <source src={props.videoSrc} type="video/webm" />
                     </motion.video>
-                    <motion.div className="links inset-0 absolute flex flex-col items-end justify-between font-extrabold"
+                    <motion.div className="links inset-0 absolute flex flex-col items-end justify-between font-extrabold "
                         initial={{
                             x: 30
                         }}
@@ -67,12 +71,12 @@ export const Card = ({ props }: CardProps) => {
                         }}
 
                     >
-                        <a className="bg-info btn btn-square rounded-r-none bg-opacity-60 backdrop-blur-md flex-auto" href={props.liveLink}>
+                        <a className="bg-info btn btn-square rounded-r-none bg-opacity-60 backdrop-blur-md flex-auto border-none" target="_blank" rel="noopener noreferrer" href={props.liveLink}>
                             <span className="-rotate-90 text-info-content">
                                 Live
                             </span>
                         </a>
-                        <a className="bg-info  btn btn-square rounded-r-none bg-opacity-60 backdrop-blur-md flex-auto" href={props.repoLink}>
+                        <a className="bg-info  btn btn-square rounded-r-none bg-opacity-60 backdrop-blur-md flex-auto border-none hover:-translate-x-10" target="_blank" rel="noopener noreferrer" href={props.repoLink}>
                             <span className="-rotate-90 text-info-content">
                                 Repo
                             </span>
