@@ -6,6 +6,7 @@ import { Card } from "./card"
 const data = [
     {
         title: 'myPhonebook',
+        year:'2023',
         description: 'a responsive multi-user phonebook web app',
         liveLink: 'https://myphonebook-app-dev.web.app/',
         repoLink: 'https://github.com/weaponsforge/my-phonebook',
@@ -13,6 +14,7 @@ const data = [
     },
     {
         title: 'pinterestClone',
+        year:'2023',
         description: 'a responsive pinterest clone with a twist',
         liveLink: 'https://vikyw89.github.io/pinterestClone/',
         repoLink: 'https://github.com/https://github.com/vikyw89/pinterestClone/my-phonebook',
@@ -20,6 +22,7 @@ const data = [
     },
     {
         title: `wheresWaldo`,
+        year:'2023',
         description: `desktop web game of where's waldo`,
         liveLink: 'https://whereswaldo-f62b8.firebaseapp.com/',
         repoLink: 'https://github.com/vikyw89/wheresWaldo',
@@ -27,6 +30,7 @@ const data = [
     },
     {
         title: `ticTacToe`,
+        year:'2023',
         description: `a ticTacToe game with a minimax algo and pruning`,
         liveLink: 'https://vikyw89.github.io/ticTacToe/',
         repoLink: 'https://github.com/vikyw89/ticTacToe',
@@ -34,6 +38,7 @@ const data = [
     },
     {
         title: `useSyncV`,
+        year:'2023',
         description: `plug&play react state management NPM library`,
         liveLink: 'https://www.npmjs.com/package/use-sync-v',
         repoLink: 'https://github.com/vikyw89/useSyncV',
@@ -41,6 +46,7 @@ const data = [
     },
     {
         title: 'calculator',
+        year:'2022',
         description: 'mobile web calculator app',
         liveLink: 'https://vikyw89.github.io/calculator/',
         repoLink: 'https://github.com/vikyw89/calculator',
@@ -50,7 +56,7 @@ const data = [
 
 export const ProjectCardContainer = () => {
     return (
-        <div className="grid overflow-y-scroll overflow-x-hidden gap-3 sm:grid-cols-8">
+        <div className="flex flex-col overflow-y-scroll overflow-x-hidden gap-3">
             {data.map((v, i) => {
                 return (
                     <Card key={i} props={v} />
