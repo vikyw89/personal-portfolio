@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 import GitHubIcon from '@mui/icons-material/GitHub';
-import PublicIcon from '@mui/icons-material/Public';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 export type CardProps = {
     props: {
@@ -70,11 +70,11 @@ export const Card = ({ props }: CardProps) => {
                         }}
 
                     >
-                        <a className="btn bg-opacity-60 rounded-none backdrop-blur-md border-none" target="_blank" rel="noopener noreferrer" href={props.liveLink}>
-                            <PublicIcon />
-                        </a>
                         <a className="btn bg-opacity-60 rounded-none backdrop-blur-md border-none" target="_blank" rel="noopener noreferrer" href={props.repoLink}>
                             <GitHubIcon />
+                        </a>
+                        <a className="btn bg-opacity-60 rounded-none backdrop-blur-md border-none" target="_blank" rel="noopener noreferrer" href={props.liveLink}>
+                            <ExitToAppIcon />
                         </a>
                     </motion.div>
                 </div>
