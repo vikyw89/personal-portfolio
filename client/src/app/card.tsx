@@ -20,7 +20,7 @@ export type CardProps = {
 
 export const Card = ({ props }: CardProps) => {
     const video: any = useRef(null)
-    const isInView = useInView(video, { amount: 0.01, margin: '-40%' })
+    const isInView = useInView(video, { amount: 0.01, margin: '-30%' })
 
     useEffect(() => {
         if (isInView) {
@@ -48,7 +48,7 @@ export const Card = ({ props }: CardProps) => {
                 }}
             >
                 <div className="relative w-full">
-                    <motion.video preload="auto" className="aspect-square bg-primary bg-opacity-50 backdrop-blur-sm w-full shadow-2xl object-cover sm:aspect-square" muted loop ref={video}
+                    <motion.video preload="auto" className="aspect-square bg-primary bg-opacity-50 backdrop-blur-sm w-full shadow-2xl object-cover sm:aspect-square md:aspect-video" muted loop ref={video}
                     >
                         <source src={props.videoSrc} type="video/webm" />
                     </motion.video>
@@ -61,7 +61,7 @@ export const Card = ({ props }: CardProps) => {
                         }}
                         viewport={{
                             amount: 0.01,
-                            margin: '-40%'
+                            margin: '-30%'
                         }}
                         transition={{
                             type: 'spring',
