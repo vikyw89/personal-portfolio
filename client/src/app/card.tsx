@@ -33,12 +33,10 @@ export const Card = ({ props }: CardProps) => {
         <>
             <motion.div className="aspect w-full z-20 flex flex-col text-base-content"
                 initial={{
-                    opacity: 0.5,
-                    scale: 0.5
+                    opacity: 0.2,
                 }}
                 whileInView={{
                     opacity: 1,
-                    scale: 1,
                 }}
                 transition={{
                     type: 'spring',
@@ -66,9 +64,7 @@ export const Card = ({ props }: CardProps) => {
                         }}
                         transition={{
                             type: 'spring',
-                            duration: 1
                         }}
-
                     >
                         <a className="btn bg-opacity-60 rounded-none backdrop-blur-md border-none" target="_blank" rel="noopener noreferrer" href={props.repoLink}>
                             <GitHubIcon />

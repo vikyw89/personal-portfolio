@@ -34,6 +34,7 @@ export const IntroComponent = ({ props }: any) => {
                 {introText.map((v, i) => {
                     return (
                         <motion.div
+                        className="w-full p-5"
                             initial={{
                                 x: -100,
                                 opacity: 0,
