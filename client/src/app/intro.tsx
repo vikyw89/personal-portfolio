@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react"
 const introText = [
     `Hello`,
     `I'm Viky`,
-    `I'm a full-stack developer`
 ]
 
 export const IntroComponent = ({ props }: any) => {
@@ -25,7 +24,7 @@ export const IntroComponent = ({ props }: any) => {
                 }}
                 transition={{
                     type: 'spring',
-                    delay: introText.length * 3
+                    delay: introText.length * 2
                 }}
                 className="flex flex-col items-center justify-center"
                 onAnimationComplete={removeIntro}
@@ -35,18 +34,17 @@ export const IntroComponent = ({ props }: any) => {
                         <motion.div
                         className="w-full p-5"
                             initial={{
-                                x: -100,
+                                scale:3,
                                 opacity: 0,
                                 color: 'black',
                                 backgroundColor: 'white'
                             }}
                             animate={{
-                                x: 0,
+                                scale:1,
                                 opacity: 1
                             }}
                             transition={{
                                 type: 'spring',
-                                stiffness: 100,
                                 delay: i * 2
                             }}
                             key={i}

@@ -33,7 +33,7 @@ html body {
 * {
   margin: 0;
   padding: 0;
-  outline: 1px solid yellow;
+  /* outline: 1px solid yellow; */
 }
 
 /* design related */
@@ -41,7 +41,7 @@ html body {
 /* add on to anchor tag */
 /* will add underline animation */
 a, a:link, a:visited {
-  color: white;
+  /* color: white; */
   text-decoration: none;
   position: relative;
   padding-bottom: 4px; /* The distance between text and underline */

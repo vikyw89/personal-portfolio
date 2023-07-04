@@ -14,7 +14,7 @@ const socials = {
     github: `https://github.com/vikyw89`,
     gmail: `vikyw89@gmail.com`,
     whatsApp: `https://wa.me/+6281234001700?text=${encodeURIComponent("I found you from your portfolio site")}`,
-    repo:`https://github.com/vikyw89/personal-portfolio`
+    repo: `https://github.com/vikyw89/personal-portfolio`
 }
 
 export const HeaderComponent = () => {
@@ -41,7 +41,7 @@ export const HeaderComponent = () => {
         })
     }
     return (
-        <div>
+        <>
             <div className="flex fixed top-0 w-full bg-primary bg-opacity-50 backdrop-blur-sm z-40 shadow-2xl">
                 <button className='btn btn-square bg-opacity-0 border-0 shadow-sm z-20' onClick={menuClickHandler}>
                     {menuIsOpen &&
@@ -68,14 +68,14 @@ export const HeaderComponent = () => {
                         damping: 8
                     }}
                     id="menuPopUp" className='z-50 fixed top-0 -left-10 bottom-0 right-0 flex' onClick={closeMenu}>
-                    <div className='flex flex-col bg-opacity-50 p-10 pl-20 font-bold bg-neutral-focus backdrop-blur-md shadow-2xl text-neutral-content'>
+                    <div className='flex flex-col bg-opacity-50 p-10 pl-20 font-bold bg-secondary text-secondary-content backdrop-blur-md shadow-2xl'>
                         <ul className='flex flex-col gap-5 flex-1'>
-                            <li><a target="_blank" rel="noopener noreferrer" href={resumeURL} >Resume</a></li>
-                            <li><a target="_blank" rel="noopener noreferrer" href="#">Projects</a></li>
+                            <li><a target="_blank" rel="noopener noreferrer" href={resumeURL}>Resume</a></li>
+                            {/* <li><a target="_blank" rel="noopener noreferrer" href="#">Projects</a></li> */}
                             <li><a target="_blank" rel="noopener noreferrer" href={socials.whatsApp}>WhatsApp</a></li>
                             <li><a target="_blank" rel="noopener noreferrer" href={socials.github}>Github</a></li>
                             <li><a target="_blank" rel="noopener noreferrer" href={socials.linkedIn}>LinkedIn</a></li>
-                            <li onClick={toggleTheme}>Active Theme<p>{themeOptions[themeIndex]}</p></li>
+                            <li onClick={toggleTheme} className='cursor-pointer'>Active Theme<p>{themeOptions[themeIndex]}</p></li>
                         </ul>
                         <a target="_blank" rel="noopener noreferrer" href={socials.repo}>
                             <GitHubIcon />
@@ -93,6 +93,6 @@ export const HeaderComponent = () => {
                     }
                 </button>
             </div>
-        </div>
+        </>
     )
 }
