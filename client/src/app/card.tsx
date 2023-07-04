@@ -9,6 +9,7 @@ export type CardProps = {
     props: {
         index?: number,
         year: string,
+        tech: Array<string>,
         videoSrc: string,
         title: string,
         description: string,
@@ -85,6 +86,11 @@ export const Card = ({ props }: CardProps) => {
                     </div>
                     <div>
                         {props.description}
+                    </div>
+                    <div className="grid grid-cols-2">
+                        {props.tech.map((v, i) => {
+                            return <li key={i}>{v}</li>
+                        })}
                     </div>
                 </div>
             </motion.div>
