@@ -2,10 +2,14 @@
 
 import { motion, useInView } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
+import GitHubIcon from '@mui/icons-material/GitHub';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 export type CardProps = {
     props: {
         index?: number,
+        year: string,
+        tech: Array<string>,
         videoSrc: string,
         title: string,
         description: string,
@@ -16,7 +20,7 @@ export type CardProps = {
 
 export const Card = ({ props }: CardProps) => {
     const video: any = useRef(null)
-    const isInView = useInView(video, { amount: 1 })
+    const isInView = useInView(video, { amount: 0.01, margin: '-40%' })
 
     useEffect(() => {
         if (isInView) {
@@ -25,66 +29,68 @@ export const Card = ({ props }: CardProps) => {
             video.current.pause()
         }
     }, [isInView])
-    const viewportEnterHandler = () => {
-        // video.current.play()
-    }
-    const viewportLeaveHandler = () => {
-        // video.current.pause()
-    }
+
     return (
         <>
-            <motion.div className="aspect-auto w-full z-20 grid text-base-content"
+            <motion.div className="aspect w-full z-20 flex flex-col text-base-content"
                 initial={{
-                    opacity: 0,
-                    scale: 0.8,
+                    opacity: 0.2,
                 }}
                 whileInView={{
                     opacity: 1,
-                    scale: 1,
+                }}
+                transition={{
+                    type: 'spring',
                 }}
                 exit={{
                     opacity: 0,
                     scale: 0,
                 }}
-                onViewportEnter={viewportEnterHandler}
-                onViewportLeave={viewportLeaveHandler}
             >
                 <div className="relative w-full">
-                    <motion.video preload="auto" className="aspect-auto w-full shadow-2xl" muted ref={video}
+                    <motion.video preload="auto" className="aspect-square bg-primary bg-opacity-50 backdrop-blur-sm w-full shadow-2xl object-cover" muted loop ref={video}
                     >
                         <source src={props.videoSrc} type="video/webm" />
                     </motion.video>
-                    <motion.div className="links inset-0 absolute flex flex-col items-end justify-between font-extrabold"
+                    <motion.div className="links inset-0 absolute grid grid-flow-col items-end  font-extrabold "
                         initial={{
-                            x: 30
+                            opacity: 0
                         }}
                         whileInView={{
-                            x: 10
+                            opacity: 1
+                        }}
+                        viewport={{
+                            amount: 0.01,
+                            margin: '-40%'
                         }}
                         transition={{
                             type: 'spring',
-                            duration: 1
                         }}
-
                     >
-                        <a className="bg-info btn btn-square rounded-r-none bg-opacity-60 backdrop-blur-md flex-auto" href={props.liveLink}>
-                            <span className="-rotate-90 text-info-content">
-                                Live
-                            </span>
+                        <a className="btn bg-opacity-60 rounded-none backdrop-blur-md border-none" target="_blank" rel="noopener noreferrer" href={props.repoLink}>
+                            <GitHubIcon />
                         </a>
-                        <a className="bg-info  btn btn-square rounded-r-none bg-opacity-60 backdrop-blur-md flex-auto" href={props.repoLink}>
-                            <span className="-rotate-90 text-info-content">
-                                Repo
-                            </span>
+                        <a className="btn bg-opacity-60 rounded-none backdrop-blur-md border-none" target="_blank" rel="noopener noreferrer" href={props.liveLink}>
+                            <ExitToAppIcon />
                         </a>
                     </motion.div>
                 </div>
                 <div className="description p-2">
-                    <div className="title font-extrabold">
-                        {props.title}
+                    <div className="title font-extrabold flex justify-between">
+                        <span>
+                            {props.title}
+                        </span>
+                        <span>
+                            {props.year}
+                        </span>
                     </div>
                     <div>
                         {props.description}
+                    </div>
+                    <div className="grid grid-cols-2">
+                        {props.tech.map((v, i) => {
+                            return <li key={i}>{v}</li>
+                        })}
                     </div>
                 </div>
             </motion.div>

@@ -21,11 +21,10 @@ export const IntroComponent = ({ props }: any) => {
         <div className="fixed inset-0 z-50 w-full h-full bg-black text-white font-bold mix-blend-multiply flex flex-col items-center justify-center ">
             <motion.div
                 animate={{
-                    scale: [1, 1000],
+                    scale: [1, 10],
                 }}
                 transition={{
                     type: 'spring',
-                    stiffness: 2,
                     delay: introText.length * 3
                 }}
                 className="flex flex-col items-center justify-center"
@@ -34,6 +33,7 @@ export const IntroComponent = ({ props }: any) => {
                 {introText.map((v, i) => {
                     return (
                         <motion.div
+                        className="w-full p-5"
                             initial={{
                                 x: -100,
                                 opacity: 0,
