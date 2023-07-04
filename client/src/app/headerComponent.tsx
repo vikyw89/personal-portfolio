@@ -33,7 +33,7 @@ export const HeaderComponent = () => {
     }
     return (
         <div>
-            <div className="flex fixed top-0 w-full bg-primary bg-opacity-50 backdrop-blur-sm z-10 shadow-2xl">
+            <div className="flex fixed top-0 w-full bg-primary bg-opacity-50 backdrop-blur-sm z-40 shadow-2xl">
                 <button className='btn btn-square bg-opacity-0 border-0 shadow-sm z-20' onClick={menuClickHandler}>
                     {menuIsOpen &&
                         <MenuOpenIcon />
@@ -45,11 +45,17 @@ export const HeaderComponent = () => {
             </div>
             {menuIsOpen &&
                 <motion.div
-                animate={{
-                    x:[-50,-5]
+                initial={{
+                    x:-50,
                 }}
-                id="menuPopUp" className='z-50 fixed top-0 left-0 bottom-0 right-0 flex' onClick={closeMenu}>
-                    <div className='flex flex-col bg-opacity-50 p-10 font-bold bg-neutral-focus backdrop-blur-md shadow-2xl'>
+                animate={{
+                    x:0
+                }}
+                exit={{
+                    x:-50
+                }}
+                id="menuPopUp" className='z-50 fixed top-0 -left-10 bottom-0 right-0 flex' onClick={closeMenu}>
+                    <div className='flex flex-col bg-opacity-50 p-10 pl-20 font-bold bg-neutral-focus backdrop-blur-md shadow-2xl'>
                         <ul className='flex flex-col gap-5'>
                             <li><a>Download Resume</a></li>
                             <li><a>Works</a></li>

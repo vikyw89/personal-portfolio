@@ -7,8 +7,7 @@ import { useEffect, useState } from 'react'
 import Spline from '@splinetool/react-spline';
 import { IntroComponent } from './intro.tsx'
 import { ProjectCardContainer } from './projectCardContainer.tsx'
-
-const textContent = [`Hello there...`, `I'm Viky`, `I'm a full-stack developer`, `I like creating things`, `I like exploring technologies`, `I'm a self learner`, `I enjoy solving problem`]
+import { HeaderComponent } from './headerComponent.tsx'
 
 export default function Home() {
   const [screenHeight, setScreenHeight] = useState(0)
@@ -23,7 +22,12 @@ export default function Home() {
         <IntroComponent props={{ setIntro }} />
         <ForegroundComponent />
       </>}
-      {!intro && <ProjectCardContainer />}
+      {!intro &&
+        <>
+        <HeaderComponent/>
+          <ProjectCardContainer />
+        </>
+      }
       <BackgroundComponent />
     </main >
   )

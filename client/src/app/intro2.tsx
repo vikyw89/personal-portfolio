@@ -28,9 +28,9 @@ export const IntroLineComponent = () => {
 }
 
 export const Intro2Component = () => {
-
+    
     const replicateHandler = () => {
-
+        console.log('replicate')
     }
 
     return (
