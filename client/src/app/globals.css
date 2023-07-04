@@ -41,7 +41,7 @@ html body {
 /* add on to anchor tag */
 /* will add underline animation */
 a, a:link, a:visited {
-  color: white;
+  /* color: white; */
   text-decoration: none;
   position: relative;
   padding-bottom: 4px; /* The distance between text and underline */
