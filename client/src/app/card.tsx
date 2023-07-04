@@ -7,7 +7,7 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 export type CardProps = {
     props: {
-        index?: number,
+        index: number,
         year: string,
         tech: Array<string>,
         videoSrc: string,
@@ -32,7 +32,7 @@ export const Card = ({ props }: CardProps) => {
 
     return (
         <>
-            <motion.div className="aspect w-full z-20 flex flex-col text-base-content sm:max-w-7xl sm:grid sm:grid-cols-2 sm:gap-2 sm:backdrop-blur-sm sm:bg-info sm:text-info-content sm:bg-opacity-50 sm:rounded-r-xl"
+            <motion.div className="aspect w-full z-20 flex flex-col text-base-content sm:max-w-7xl sm:grid sm:grid-flow-dense sm:grid-cols-2 sm:gap-2 sm:backdrop-blur-sm sm:bg-info sm:text-info-content sm:bg-opacity-80 sm:rounded-xl"
                 initial={{
                     opacity: 0.2,
                 }}
@@ -47,7 +47,9 @@ export const Card = ({ props }: CardProps) => {
                     scale: 0,
                 }}
             >
-                <div className="relative w-full">
+                <div className="relative w-full" style={{
+                    gridColumnStart: (props.index % 2 === 0) ? 1 : 2
+                }}>
                     <motion.video preload="auto" className="aspect-square bg-primary bg-opacity-50 backdrop-blur-sm w-full shadow-2xl object-cover sm:aspect-square md:aspect-video" muted loop ref={video}
                     >
                         <source src={props.videoSrc} type="video/webm" />
@@ -75,7 +77,7 @@ export const Card = ({ props }: CardProps) => {
                         </a>
                     </motion.div>
                 </div>
-                <div className="description p-2 sm:p-5 sm:rounded-r-xl sm:text-info-content sm:flex sm:flex-col sm:gap-2">
+                <div className="description p-2 sm:p-5 sm:rounded-xl sm:text-info-content sm:flex sm:flex-col sm:gap-2">
                     <div className="title font-extrabold flex justify-between sm:text-xl">
                         <span className="">
                             {props.title}
