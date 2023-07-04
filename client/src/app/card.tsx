@@ -32,7 +32,7 @@ export const Card = ({ props }: CardProps) => {
 
     return (
         <>
-            <motion.div className="aspect w-full z-20 flex flex-col text-base-content"
+            <motion.div className="aspect w-full z-20 flex flex-col text-base-content sm:max-w-7xl sm:grid sm:grid-cols-2 sm:gap-2 sm:backdrop-blur-sm sm:bg-info sm:text-info-content sm:bg-opacity-50 sm:rounded-r-xl"
                 initial={{
                     opacity: 0.2,
                 }}
@@ -48,7 +48,7 @@ export const Card = ({ props }: CardProps) => {
                 }}
             >
                 <div className="relative w-full">
-                    <motion.video preload="auto" className="aspect-square bg-primary bg-opacity-50 backdrop-blur-sm w-full shadow-2xl object-cover" muted loop ref={video}
+                    <motion.video preload="auto" className="aspect-square bg-primary bg-opacity-50 backdrop-blur-sm w-full shadow-2xl object-cover sm:aspect-auto" muted loop ref={video}
                     >
                         <source src={props.videoSrc} type="video/webm" />
                     </motion.video>
@@ -75,9 +75,9 @@ export const Card = ({ props }: CardProps) => {
                         </a>
                     </motion.div>
                 </div>
-                <div className="description p-2">
-                    <div className="title font-extrabold flex justify-between">
-                        <span>
+                <div className="description p-2 sm:p-5 sm:rounded-r-xl sm:text-info-content sm:flex sm:flex-col sm:gap-2">
+                    <div className="title font-extrabold flex justify-between sm:text-xl">
+                        <span className="">
                             {props.title}
                         </span>
                         <span>
