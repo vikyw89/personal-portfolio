@@ -1,10 +1,10 @@
 "use client"
 import { useState } from 'react'
-import { BackgroundComponent } from './background.tsx'
-import { ForegroundComponent } from './foreground.tsx'
-import { HeaderComponent } from './headerComponent.tsx'
-import { IntroComponent } from './intro.tsx'
-import { ProjectCardContainer } from './projectCardContainer.tsx'
+import { BackgroundComponent } from './background'
+import { ForegroundComponent } from './foreground'
+import { HeaderComponent } from './headerComponent'
+import { IntroComponent } from './intro'
+import { ProjectCardContainer } from './projectCardContainer'
 
 export default function Home() {
   const [intro, setIntro] = useState(true)
