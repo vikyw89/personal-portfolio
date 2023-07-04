@@ -54,13 +54,17 @@ export const HeaderComponent = () => {
                 exit={{
                     x:-50
                 }}
+                transition={{
+                    type:'spring',
+                    damping:8
+                }}
                 id="menuPopUp" className='z-50 fixed top-0 -left-10 bottom-0 right-0 flex' onClick={closeMenu}>
                     <div className='flex flex-col bg-opacity-50 p-10 pl-20 font-bold bg-neutral-focus backdrop-blur-md shadow-2xl'>
                         <ul className='flex flex-col gap-5'>
                             <li><a>Download Resume</a></li>
                             <li><a>Works</a></li>
                             <li><a>Contact Me</a></li>
-                            <li><a onClick={toggleTheme}>Theme Switcher</a><p>{themeOptions[themeIndex]}</p></li>
+                            <li><a onClick={toggleTheme}>Active Theme</a><p>{themeOptions[themeIndex]}</p></li>
                         </ul>
                     </div>
                 </motion.div>

@@ -24,7 +24,7 @@ export default function Home() {
       </>}
       {!intro &&
         <>
-        <HeaderComponent/>
+          <HeaderComponent />
           <ProjectCardContainer />
         </>
       }
