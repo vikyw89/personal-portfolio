@@ -1,6 +1,4 @@
-import { motion, useInView } from "framer-motion"
-import Image from "next/image"
-import { useEffect, useRef } from "react"
+"use client"
 import { Card } from "./card"
 
 const data = [
