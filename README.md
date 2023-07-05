@@ -1,15 +1,36 @@
 # personal-portfolio
 
-### Alpha version
+For developmental purpose, we have 2 separate tags: 
+- Alpha Version
+    - Live1: https://personal-portfolio-git-dev-vikyw89.vercel.app/
+    - Live2: https://vikyw89.github.io/personal-portfolio/
+    - Repo: https://github.com/vikyw89/personal-portfolio
+- Beta Version
+    - For releases that look good on Alpha will be graduated to Beta
+    - Live: https://personal-portfolio-eight-rose.vercel.app/
+    - Repo: https://github.com/vikyw89/personal-portfolio/tree/main
 
-live1: https://personal-portfolio-git-dev-vikyw89.vercel.app/
+Semantic versioning will run independently of tag
 
-live2: https://vikyw89.github.io/personal-portfolio/
+## Technologies
 
-repo: https://github.com/vikyw89/personal-portfolio
+- NextJS
+    - Fullstack framework using react library
+    - Widely adopted, ensuring good documentation and update
+- Typescript
+    - Testing how good typescript for front end development
+- TailwindCSS
+    - Testing how good tailwindCSS as CSS framework
+    - TailwindCSS encourages mobile first development
+    - easy learning curve from vanilla CSS
+- DaisyUI
+    - It has so many themes !
+    - Using theme is easy way to increase harmonious design especially among team
+- MaterialUI
+    - Loving their icons, easy to use and just 1 search away
+- Framer-motion
+    - For intersection observer and animation
 
-### Beta version
+## Instruction
 
-live: https://personal-portfolio-eight-rose.vercel.app/
-
-repo: https://github.com/vikyw89/personal-portfolio/tree/main
+To run the app, refer to readme file inside /client directory
