@@ -18,7 +18,7 @@ const socials = {
 }
 
 export const HeaderComponent = () => {
-    const [themeIndex, setThemeIndex] = useState(0)
+    const [themeIndex, setThemeIndex] = useState(3)
     const [menuIsOpen, setMenuIsOpen] = useState(false)
 
     const menuClickHandler = (e: any) => {
@@ -42,7 +42,7 @@ export const HeaderComponent = () => {
     }
     return (
         <>
-            <div className="flex fixed top-0 w-full bg-primary bg-opacity-50 backdrop-blur-sm z-40 shadow-2xl">
+            <div className="flex fixed top-0 w-full bg-primary bg-opacity-50 backdrop-blur-sm z-40 shadow-lg">
                 <button className='btn btn-square bg-opacity-0 border-0 shadow-sm z-20' onClick={menuClickHandler}>
                     {menuIsOpen &&
                         <MenuOpenIcon />
@@ -68,7 +68,7 @@ export const HeaderComponent = () => {
                         damping: 8
                     }}
                     id="menuPopUp" className='z-50 fixed top-0 -left-10 bottom-0 right-0 flex' onClick={closeMenu}>
-                    <div className='flex flex-col bg-opacity-50 p-10 pl-20 font-bold bg-secondary text-secondary-content backdrop-blur-md shadow-2xl'>
+                    <div className='flex flex-col bg-opacity-50 p-10 pl-20 font-bold bg-secondary text-secondary-content backdrop-blur-md shadow-lg'>
                         <ul className='flex flex-col gap-5 flex-1'>
                             <li><a target="_blank" rel="noopener noreferrer" href={resumeURL}>Resume</a></li>
                             {/* <li><a target="_blank" rel="noopener noreferrer" href="#">Projects</a></li> */}
@@ -84,7 +84,7 @@ export const HeaderComponent = () => {
                 </motion.div>
             }
             <div>
-                <button className='btn btn-square opacity-0' onClick={menuClickHandler}>
+                <button className='btn btn-square opacity-0'>
                     {menuIsOpen &&
                         <MenuOpenIcon />
                     }

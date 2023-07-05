@@ -32,7 +32,7 @@ export const Card = ({ props }: CardProps) => {
 
     return (
         <>
-            <motion.div className="aspect w-full z-20 flex flex-col text-base-content sm:max-w-7xl sm:grid sm:grid-flow-dense sm:grid-cols-2 sm:gap-2 sm:backdrop-blur-sm sm:bg-secondary sm:text-secondary-content sm:bg-opacity-80 sm:rounded-xl"
+            <motion.div className="aspect w-full z-20 flex flex-col shadow-lg text-base-content sm:max-w-7xl sm:grid sm:grid-flow-dense sm:grid-cols-2 sm:gap-2 sm:backdrop-blur-sm sm:bg-secondary sm:text-secondary-content sm:bg-opacity-80 sm:rounded-xl"
                 initial={{
                     opacity: 0.2,
                 }}
