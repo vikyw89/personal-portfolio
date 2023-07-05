@@ -26,7 +26,7 @@ export const IntroComponent = ({ props }: any) => {
                     type: 'spring',
                     delay: introText.length * 2
                 }}
-                className="flex flex-col items-center justify-center"
+                className="flex flex-col items-center justify-center text-center"
                 onAnimationComplete={removeIntro}
             >
                 {introText.map((v, i) => {

@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en" data-theme="march">
+    <html lang="en" data-theme="cupcake">
       <body className={inter.className}>
         <Suspense fallback={<Loading />}>
           <div className='fixed top-0 left-0 right-0 bottom-0 bg-base-100 text-neutral-content overflow-x-hidden flex flex-col'>

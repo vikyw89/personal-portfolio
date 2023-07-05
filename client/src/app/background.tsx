@@ -10,7 +10,7 @@ export const BackgroundComponent = () => {
     }, [])
 
     return (
-        <div className='background fixed -z-10 inset-0 opacity-25 text-base-content'>
+        <div className='background fixed -z-10 inset-0 opacity-50 text-base-content'>
             <motion.div
                 initial={{
                     opacity: 0
@@ -73,22 +73,6 @@ export const BackgroundComponent = () => {
                 }}
                 className='text-9xl font-bold'
             >
-                你好
-            </motion.div>
-            <motion.div
-                initial={{
-                    opacity: 0
-                }}
-                animate={{
-                    x: [0 - width, width],
-                    opacity: [100, 100]
-                }}
-                transition={{
-                    duration: Math.random() * 20 + 10,
-                    repeat: Infinity,
-                }}
-                className='text-9xl font-bold'
-            >
                 Hello
             </motion.div>
             <motion.div
@@ -96,7 +80,7 @@ export const BackgroundComponent = () => {
                     opacity: 0
                 }}
                 animate={{
-                    x: [width, 0 - width],
+                    x: [0 - width, width],
                     opacity: [100, 100]
                 }}
                 transition={{
@@ -122,6 +106,22 @@ export const BackgroundComponent = () => {
                 className='text-9xl font-bold'
             >
                 こんにちは
+            </motion.div>
+            <motion.div
+                initial={{
+                    opacity: 0
+                }}
+                animate={{
+                    x: [width, 0 - width],
+                    opacity: [100, 100]
+                }}
+                transition={{
+                    duration: Math.random() * 20 + 10,
+                    repeat: Infinity,
+                }}
+                className='text-9xl font-bold'
+            >
+                你好
             </motion.div>
         </div>
     )
