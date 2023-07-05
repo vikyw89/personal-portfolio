@@ -23,7 +23,7 @@ export default function Home() {
           <ProjectCardContainer />
         </>
       }
-      <BackgroundComponent />
+      {/* <BackgroundComponent /> */}
     </main >
   )
 }

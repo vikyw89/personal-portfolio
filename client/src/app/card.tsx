@@ -42,6 +42,10 @@ export const Card = ({ props }: CardProps) => {
                 transition={{
                     type: 'spring',
                 }}
+                viewport={{
+                    amount: 0.01,
+                    margin: '-30%'
+                }}
                 exit={{
                     opacity: 0,
                     scale: 0,
@@ -56,7 +60,8 @@ export const Card = ({ props }: CardProps) => {
                     </motion.video>
                     <motion.div className="links inset-0 absolute grid grid-flow-col items-end  font-extrabold "
                         initial={{
-                            opacity: 0
+                            opacity: 0,
+                            scale:0.9
                         }}
                         whileInView={{
                             opacity: 1
