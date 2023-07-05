@@ -32,7 +32,7 @@ export const Card = ({ props }: CardProps) => {
 
     return (
         <>
-            <motion.div className="aspect w-full z-20 flex flex-col text-base-content sm:max-w-7xl sm:grid sm:grid-flow-dense sm:grid-cols-2 sm:gap-2 sm:backdrop-blur-sm sm:bg-secondary sm:text-secondary-content sm:bg-opacity-80 sm:rounded-xl"
+            <motion.div className="aspect w-full z-20 flex flex-col shadow-lg text-base-content sm:max-w-7xl sm:grid sm:grid-flow-dense sm:grid-cols-2 sm:gap-2 sm:backdrop-blur-sm sm:bg-secondary sm:text-secondary-content sm:bg-opacity-80 sm:rounded-xl"
                 initial={{
                     opacity: 0.2,
                 }}
@@ -41,6 +41,10 @@ export const Card = ({ props }: CardProps) => {
                 }}
                 transition={{
                     type: 'spring',
+                }}
+                viewport={{
+                    amount: 0.01,
+                    margin: '-30%'
                 }}
                 exit={{
                     opacity: 0,
@@ -56,7 +60,8 @@ export const Card = ({ props }: CardProps) => {
                     </motion.video>
                     <motion.div className="links inset-0 absolute grid grid-flow-col items-end  font-extrabold "
                         initial={{
-                            opacity: 0
+                            opacity: 0,
+                            scale:0.9
                         }}
                         whileInView={{
                             opacity: 1
