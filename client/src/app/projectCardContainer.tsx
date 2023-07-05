@@ -16,7 +16,7 @@ const data = [
         year: '2023',
         description: 'a responsive pinterest clone with a twist',
         tech: ['NextJS', 'postgreSQL', 'Supabase', 'Cloudinary', 'MaterialUI', 'TailwindCSS', 'DaisyUI'],
-        liveLink: 'https://vikyw89.github.io/pinterestClone/',
+        liveLink: 'https://pinterest-clone-lemon.vercel.app/',
         repoLink: 'https://github.com/https://github.com/vikyw89/pinterestClone/my-phonebook',
         videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FScreencast%20from%202023-06-29%2015-47-33.webm?alt=media&token=19cb540a-4a88-43f3-932e-b80fff12be4d'
     },
