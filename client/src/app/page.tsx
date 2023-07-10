@@ -8,44 +8,71 @@ import { ProjectCardContainer } from './projectCardContainer'
 import { IntroductionComponent } from './introduction'
 import { AnimatedMe } from './animatedMe'
 import { AnimatePresence, motion } from 'framer-motion'
+import MenuIcon from '@mui/icons-material/Menu';
+import { useRouter } from 'next/navigation'
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import BackgroundComponent2 from './background2'
+import BackgroundComponent3 from './background3'
+import AnimatedMe2 from './animatedMe2'
 
 export default function Home() {
-  const [intro, setIntro] = useState(true)
+  // const [intro, setIntro] = useState(true)
+  const router = useRouter()
+
+  const openMenuHandler = () => {
+    router.push('/menu')
+  }
+
+  const navAboutHandler = () => {
+    router.push('/about')
+  }
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
-      <motion.main className="content grid flex-1 text-base-content"
-        initial={{
-          x: -1000,
-          scale: 0
-        }}
-        animate={{
-          x: 0,
-          scale: 1
-        }}
-        exit={{
-          x: 1000,
-          scale: 0
-        }}
-      >
-        aaaaaa
-        {/* {intro &&
+    <motion.div className="fixed inset-0 content flex flex-col text-base-content justify-between z-50">
+      <div className='flex justify-between p-3'>
+        <button onClick={openMenuHandler}>
+          <MenuIcon />
+        </button>
+        <button className='flex justify-center items-center' onClick={navAboutHandler}>
+          <span>About</span>
+          <ArrowRightIcon />
+        </button>
+      </div>
+      <IntroductionComponent />
+      <div className='flex justify-between w-full p-3'>
+        <button className='flex w-full justify-start'>
+          <ArrowLeftIcon />
+          <h1>
+            prev
+          </h1>
+        </button>
+        <button className='flex w-full justify-end'>
+          <h1>
+            next
+          </h1>
+          <ArrowRightIcon />
+        </button>
+      </div>
+      {/* <BackgroundComponent2/> */}
+      {/* <BackgroundComponent3/> */}
+      {/* <AnimatedMe /> */}
+      {/* {intro &&
         <>
           <IntroComponent props={{ setIntro }} />
           <ForegroundComponent />
         </>
       } */}
-        {/* <AnimatedMe /> */}
-        {intro &&
+      {/* <AnimatedMe /> */}
+      {/* {intro &&
           <>
             <HeaderComponent />
             <IntroductionComponent />
             <ProjectCardContainer />
           </>
-        }
-        {/* <BackgroundComponent /> */}
-        {/* <ForegroundComponent /> */}
-      </motion.main >
-    </AnimatePresence>
+        } */}
+      <BackgroundComponent />
+      {/* <ForegroundComponent /> */}
+    </motion.div >
   )
 }

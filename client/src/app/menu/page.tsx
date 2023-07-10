@@ -5,6 +5,7 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
+import { AnimatedMe } from '../animatedMe';
 
 const links = {
     linkedIn: `https://www.linkedin.com/in/vikyweb/`,
@@ -45,6 +46,7 @@ export default function Menu() {
                     )
                 })}
             </ul>
+            <AnimatedMe/>
         </motion.div>
     )
 }

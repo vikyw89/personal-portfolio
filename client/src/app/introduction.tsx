@@ -1,10 +1,16 @@
 "use client"
 
-const introduction = `Hey there! I'm Viky, a former architectural engineer turned fullstack developer. With a decade of experience in architecture, I've honed my skills in problem-solving, attention to detail, and creative thinking. Now, I'm excited to bring my expertise to software development. Let's team up and create something amazing!`
+const name = `VIKY`
+const arr = new Array(50).fill('VIKY', 0, 50)
+const introduction = `Web Developer`
 export const IntroductionComponent = () => {
     return (
-        <p className="z-10 p-10 text-base-content backdrop-blur-sm">
-            {introduction}
-        </p>
+        <div className="z-10 text-base-content flex flex-col items-center bg-transparent">
+            <h1 className="font-mono">
+            </h1>
+            <h1 className="font-mono bg-primary text-primary-content w-full font-bold text-3xl p-3">
+            profile
+            </h1>
+        </div>
     )
 }
