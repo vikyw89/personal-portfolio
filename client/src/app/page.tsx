@@ -29,13 +29,13 @@ export default function Home() {
   }
 
   return (
-    <motion.div className="fixed inset-0 content flex flex-col text-base-content justify-between z-50">
+    <motion.div className="fixed inset-0 content flex flex-col text-base-content justify-between z-0">
       <div className='flex justify-between p-3'>
         <button onClick={openMenuHandler}>
           <MenuIcon />
         </button>
         <button className='flex justify-center items-center' onClick={navAboutHandler}>
-          <span>About</span>
+          <span>/about</span>
           <ArrowRightIcon />
         </button>
       </div>
@@ -44,19 +44,18 @@ export default function Home() {
         <button className='flex w-full justify-start'>
           <ArrowLeftIcon />
           <h1>
-            prev
+            .prev()
           </h1>
         </button>
         <button className='flex w-full justify-end'>
           <h1>
-            next
+            .next()
           </h1>
           <ArrowRightIcon />
         </button>
       </div>
       {/* <BackgroundComponent2/> */}
       {/* <BackgroundComponent3/> */}
-      {/* <AnimatedMe /> */}
       {/* {intro &&
         <>
           <IntroComponent props={{ setIntro }} />
@@ -71,7 +70,7 @@ export default function Home() {
             <ProjectCardContainer />
           </>
         } */}
-      <BackgroundComponent />
+      {/* <BackgroundComponent /> */}
       {/* <ForegroundComponent /> */}
     </motion.div >
   )
