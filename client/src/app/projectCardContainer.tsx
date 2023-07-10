@@ -1,4 +1,5 @@
 "use client"
+import { motion } from "framer-motion"
 import { Card } from "./card"
 
 const data = [
@@ -60,12 +61,20 @@ const data = [
 
 export const ProjectCardContainer = () => {
     return (
-        <div className="flex flex-col overflow-y-scroll overflow-x-hidden gap-3 sm:grid sm:grid-flow-row-dense sm:justify-center sm:overflow-y-hidden sm:gap-10 sm:p-10">
-            {data.map((v, i) => {
-                return (
-                    <Card key={i} props={{ ...v, 'index': i }} />
-                )
-            })}
-        </div>
+        <motion.div
+            exit={{
+                scale: 0,
+                x: 1000
+            }}
+        >
+            <h1 className="font-bold text-center">Projects</h1>
+            <div className="flex flex-col overflow-y-scroll overflow-x-hidden gap-3 sm:grid sm:grid-flow-row-dense sm:justify-center sm:overflow-y-hidden sm:gap-10 sm:p-10">
+                {data.map((v, i) => {
+                    return (
+                        <Card key={i} props={{ ...v, 'index': i }} />
+                    )
+                })}
+            </div>
+        </motion.div>
     )
 }

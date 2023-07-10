@@ -19,7 +19,6 @@ const socials = {
 
 export const HeaderComponent = () => {
     const [themeIndex, setThemeIndex] = useState(3)
-    const [menuIsOpen, setMenuIsOpen] = useState(false)
 
     const menuClickHandler = (e: any) => {
         setMenuIsOpen(p => !p)
@@ -42,56 +41,10 @@ export const HeaderComponent = () => {
     }
     return (
         <>
-            <div className="flex fixed top-0 w-full bg-primary bg-opacity-50 backdrop-blur-sm z-40 shadow-lg">
-                <button className='btn btn-square bg-opacity-0 border-0 shadow-sm z-20' onClick={menuClickHandler}>
-                    {menuIsOpen &&
-                        <MenuOpenIcon />
-                    }
-                    {!menuIsOpen &&
-                        <MenuIcon />
-                    }
-                </button>
-            </div>
-            {menuIsOpen &&
-                <motion.div
-                    initial={{
-                        x: -50,
-                    }}
-                    animate={{
-                        x: 0
-                    }}
-                    exit={{
-                        x: -50
-                    }}
-                    transition={{
-                        type: 'spring',
-                        damping: 8
-                    }}
-                    id="menuPopUp" className='z-50 fixed top-0 -left-10 bottom-0 right-0 flex' onClick={closeMenu}>
-                    <div className='flex flex-col bg-opacity-50 p-10 pl-20 font-bold bg-secondary text-secondary-content backdrop-blur-md shadow-lg'>
-                        <ul className='flex flex-col gap-5 flex-1'>
-                            <li><a target="_blank" rel="noopener noreferrer" href={resumeURL}>Resume</a></li>
-                            {/* <li><a target="_blank" rel="noopener noreferrer" href="#">Projects</a></li> */}
-                            <li><a target="_blank" rel="noopener noreferrer" href={socials.whatsApp}>WhatsApp</a></li>
-                            <li><a target="_blank" rel="noopener noreferrer" href={socials.github}>Github</a></li>
-                            <li><a target="_blank" rel="noopener noreferrer" href={socials.linkedIn}>LinkedIn</a></li>
-                            <li onClick={toggleTheme} className='cursor-pointer'>Active Theme<p>{themeOptions[themeIndex]}</p></li>
-                        </ul>
-                        <a target="_blank" rel="noopener noreferrer" href={socials.repo}>
-                            <GitHubIcon />
-                        </a>
-                    </div>
-                </motion.div>
-            }
-            <div>
-                <button className='btn btn-square opacity-0'>
-                    {menuIsOpen &&
-                        <MenuOpenIcon />
-                    }
-                    {!menuIsOpen &&
-                        <MenuIcon />
-                    }
-                </button>
+            <div className="flex fixed top-0 w-full z-40">
+                <a href="/menu">
+                    <MenuIcon />
+                </a>
             </div>
         </>
     )
