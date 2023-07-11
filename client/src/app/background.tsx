@@ -7,8 +7,8 @@ export const Background = () => {
     const pathName = usePathname()
 
     return (
-        <div className='background fixed z-10 inset-0 opacity-20 text-base-content grid'>
-            <ReactFitty className="relative [writing-mode:vertical-lr] h-14 select-none" >
+        <div className='background fixed z-10 inset-0 opacity-20 text-base-content'>
+            <ReactFitty className="absolute right-0 [writing-mode:vertical-lr] h-14 select-none" maxSize={200}>
                 {pathName}
             </ReactFitty>
         </div>
