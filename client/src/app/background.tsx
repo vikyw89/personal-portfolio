@@ -10,7 +10,9 @@ export const Background = () => {
                 {pathName}
             </ReactFitty>
             <ReactFitty className="absolute bottom-0">
-                viky
+                <h1 className="hidden xl:block">
+                    viky
+                </h1>
             </ReactFitty>
         </div>
     )

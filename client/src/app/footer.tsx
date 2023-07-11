@@ -7,12 +7,12 @@ export const Footer = () => {
         <button className='flex w-full justify-start'>
           <ArrowLeftIcon />
           <h1>
-            .prev()
+            .prev
           </h1>
         </button>
         <button className='flex w-full justify-end'>
           <h1>
-            .next()
+            .next
           </h1>
           <ArrowRightIcon />
         </button>
