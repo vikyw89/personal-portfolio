@@ -8,11 +8,6 @@ import { usePathname } from "next/navigation";
 import { Background } from "../background";
 
 export default function Page() {
-    const pathName = usePathname()
-    useEffect(() => {
-        console.log("🚀 ~ file: page.tsx:11 ~ Page ~ pathName:", pathName)
-
-    }, [])
     return (
         <>
             <motion.div className="fixed inset-0 content grid text-base-content z-0">

@@ -32,10 +32,10 @@ export const IntroductionComponent = () => {
                     viky
                 </h1>
                 <h1 className="font-extrabold">
-                    .level
+                    .zodiac
                 </h1>
                 <h1 className="pl-5">
-                    50/99
+                    intp
                 </h1>
                 <h1 className="font-extrabold">
                     .class
@@ -60,18 +60,20 @@ export const IntroductionComponent = () => {
             </div>
             <div className="col-[2/3] row-[1/5] z-40 relative w-full h-full">
                 <AnimatedMe />
-                {/* <img className="object-cover h-full" src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"/> */}
             </div>
             <div className="col-[1/-1] row-[3/4] p-3 relative z-50 max-w-[50vw] sm:p-10 sm:pr-0 sm:max-w-[70vw] xl:col-[1/2]">
                 <h1 className="font-extrabold">
-                    .skills
+                    .abilities
                 </h1>
                 <div className="grid pl-5">
                     <h1>
                         self learner
                     </h1>
                     <h1>
-                        exploration
+                        docs exploration
+                    </h1>
+                    <h1>
+                        docs exploration
                     </h1>
                 </div>
                 <h1 className="font-extrabold hidden sm:block">

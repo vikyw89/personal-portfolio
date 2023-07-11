@@ -1,8 +1,9 @@
 import ArrowRightIcon from '@mui/icons-material/ArrowRight'
 import MenuIcon from '@mui/icons-material/Menu'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 export const Header = () => {
+  const pathName = usePathname()
     const router = useRouter()
     const openMenuHandler = () => {
       router.push('/menu')
@@ -18,7 +19,7 @@ export const Header = () => {
           <MenuIcon />
         </button>
         <button className='flex justify-center items-center' onClick={navAboutHandler}>
-          <span>/about</span>
+          <span>{pathName === '/about/' ? '.home' : '.about' }</span>
           <ArrowRightIcon />
         </button>
       </div>
