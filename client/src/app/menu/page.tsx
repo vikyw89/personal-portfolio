@@ -5,7 +5,7 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { AnimatedMe } from '../animatedMe';
+import { AnimatedMe } from '../about/animatedMe';
 
 const links = {
     linkedIn: `https://www.linkedin.com/in/vikyweb/`,

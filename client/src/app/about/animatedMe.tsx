@@ -6,8 +6,8 @@ import { Model } from "./Model7"
 export const AnimatedMe = () => {
 
     return (
-        <div className="flex items-center justify-center h-[calc(100vh/2)] absolute aspect-auto object-contain">
-            <Canvas>
+        <div className="h-[50vh] aspect-auto">
+            <Canvas className="object-scale-down">
                 <Model/>
                 <Environment preset="lobby"  />
             </Canvas>

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Footer } from "../footer";
 import { Header } from "../header";
-import { IntroductionComponent } from "../introduction";
+import { IntroductionComponent } from "./introduction";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Background } from "../background";
