@@ -1,12 +1,12 @@
 "use client"
-import { Environment } from "@react-three/drei"
+import { Environment, OrbitControls } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 import { Model } from "./Model7"
 
 export const AnimatedMe = () => {
 
     return (
-        <div className="overflow-hidden grid items-center justify-center h-[calc(100vh/2)] aspect-auto absolute">
+        <div className="flex items-center justify-center h-[calc(100vh/2)] absolute aspect-auto object-contain">
             <Canvas>
                 <Model/>
                 <Environment preset="lobby"  />

@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react'
-import { BackgroundComponent } from './background'
+import { Background } from './background'
 import { ForegroundComponent } from './foreground'
 import { HeaderComponent } from './headerComponent'
 import { IntroComponent } from './intro'
@@ -15,6 +15,8 @@ import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import BackgroundComponent2 from './background2'
 import BackgroundComponent3 from './background3'
 import AnimatedMe2 from './animatedMe2'
+import { Header } from './header'
+import { Footer } from './footer'
 
 export default function Home() {
   // const [intro, setIntro] = useState(true)
@@ -29,31 +31,10 @@ export default function Home() {
   }
 
   return (
-    <motion.div className="fixed inset-0 content flex flex-col text-base-content justify-between z-0">
-      <div className='flex justify-between p-3'>
-        <button onClick={openMenuHandler}>
-          <MenuIcon />
-        </button>
-        <button className='flex justify-center items-center' onClick={navAboutHandler}>
-          <span>/about</span>
-          <ArrowRightIcon />
-        </button>
-      </div>
+    <motion.div className="fixed inset-0 content flex flex-col text-base-content z-0 justify-center">
+      <Header />
       <IntroductionComponent />
-      <div className='flex justify-between w-full p-3'>
-        <button className='flex w-full justify-start'>
-          <ArrowLeftIcon />
-          <h1>
-            .prev()
-          </h1>
-        </button>
-        <button className='flex w-full justify-end'>
-          <h1>
-            .next()
-          </h1>
-          <ArrowRightIcon />
-        </button>
-      </div>
+      <Footer/>
       {/* <BackgroundComponent2/> */}
       {/* <BackgroundComponent3/> */}
       {/* {intro &&
@@ -70,7 +51,7 @@ export default function Home() {
             <ProjectCardContainer />
           </>
         } */}
-      {/* <BackgroundComponent /> */}
+      <Background />
       {/* <ForegroundComponent /> */}
     </motion.div >
   )

@@ -1,128 +1,17 @@
 import { motion } from "framer-motion"
+import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
+import { ReactFitty } from "react-fitty"
 
-export const BackgroundComponent = () => {
+export const Background = () => {
     const [width, setWidth] = useState(0)
-
-    useEffect(() => {
-        const screenWidth = window.screen.width
-        setWidth(screenWidth)
-    }, [])
+    const pathName = usePathname()
 
     return (
-        <div className='background fixed -z-10 inset-0 opacity-50 text-base-content'>
-            <motion.div
-                initial={{
-                    opacity: 0
-                }}
-                animate={{
-                    x: [0 - width, width],
-                    opacity: [100, 100]
-                }}
-                transition={{
-                    duration: Math.random() * 20 + 10,
-                    repeat: Infinity,
-                }}
-                className='text-9xl font-bold'
-            >
-                Bonjour
-            </motion.div>
-            <motion.div
-                initial={{
-                    opacity: 0
-                }}
-                animate={{
-                    x: [width, 0 - width],
-                    opacity: [100, 100]
-                }}
-                transition={{
-                    duration: Math.random() * 20 + 10,
-                    repeat: Infinity,
-                }}
-                className='text-9xl font-bold'
-            >
-                Aloha
-            </motion.div>
-            <motion.div
-                initial={{
-                    opacity: 0
-                }}
-                animate={{
-                    x: [0 - width, width],
-                    opacity: [100, 100]
-                }}
-                transition={{
-                    duration: Math.random() * 20 + 10,
-                    repeat: Infinity,
-                }}
-                className='text-9xl font-bold'
-            >
-                Hei
-            </motion.div>
-            <motion.div
-                initial={{
-                    opacity: 0
-                }}
-                animate={{
-                    x: [width, 0 - width],
-                    opacity: [100, 100]
-                }}
-                transition={{
-                    duration: Math.random() * 20 + 10,
-                    repeat: Infinity,
-                }}
-                className='text-9xl font-bold'
-            >
-                Hello
-            </motion.div>
-            <motion.div
-                initial={{
-                    opacity: 0
-                }}
-                animate={{
-                    x: [0 - width, width],
-                    opacity: [100, 100]
-                }}
-                transition={{
-                    duration: Math.random() * 20 + 10,
-                    repeat: Infinity,
-                }}
-                className='text-9xl font-bold'
-            >
-                Hola
-            </motion.div>
-            <motion.div
-                initial={{
-                    opacity: 0
-                }}
-                animate={{
-                    x: [width, 0 - width],
-                    opacity: [100, 100]
-                }}
-                transition={{
-                    duration: Math.random() * 20 + 10,
-                    repeat: Infinity,
-                }}
-                className='text-9xl font-bold'
-            >
-                こんにちは
-            </motion.div>
-            <motion.div
-                initial={{
-                    opacity: 0
-                }}
-                animate={{
-                    x: [width, 0 - width],
-                    opacity: [100, 100]
-                }}
-                transition={{
-                    duration: Math.random() * 20 + 10,
-                    repeat: Infinity,
-                }}
-                className='text-9xl font-bold'
-            >
-                你好
-            </motion.div>
+        <div className='background fixed z-10 inset-0 opacity-50 text-base-content grid'>
+            <ReactFitty className="relative [writing-mode:vertical-lr]" >
+                {pathName}
+            </ReactFitty>
         </div>
     )
 }

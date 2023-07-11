@@ -1,3 +1,4 @@
+
 import { Suspense } from 'react'
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en" data-theme="cupcake">
+    <html lang="en" data-theme="dracula">
       <body className={inter.className}>
         <Suspense fallback={<Loading />}>
           <main className='fixed inset-0 bg-base-100 text-base-content overflow-hidden -z-50'>
