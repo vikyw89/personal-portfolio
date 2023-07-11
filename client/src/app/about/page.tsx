@@ -15,7 +15,7 @@ export default function Page() {
     }, [])
     return (
         <>
-            <motion.div className="fixed inset-0 content flex flex-col text-base-content z-0 justify-center">
+            <motion.div className="fixed inset-0 content grid text-base-content z-0">
                 <Header />
                 <IntroductionComponent />
                 <Footer />

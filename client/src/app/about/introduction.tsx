@@ -24,7 +24,7 @@ export const IntroductionComponent = () => {
 
     return (
         <div className="text-base-content grid grid-cols-[3fr_1fr] relative mt-20 mb-20 row-[repeat(5,min-content)]] self-center xl:grid-cols-[4fr_1fr_2fr]">
-            <div className="row-[1/2] p-3 col-[1/-1] z-50 relative sm:p-10 xl:col-[1/2]">
+            <div className="row-[1/2] p-3 col-[1/-1] max-w-[50vw] z-50 relative pb-10 sm:p-10">
                 <h1 className="font-extrabold">
                     .name
                 </h1>
@@ -46,24 +46,21 @@ export const IntroductionComponent = () => {
                     </h1>
                 </div>
             </div>
-            <div className="col-[1/-1] row-[2/3]">
-                <Marquee autoFill speed={10} className="h-6">
-                    <span className="font-extrabold text-primary z-10 relative">
-                        VIKY&nbsp;&nbsp;
-                    </span>
-                </Marquee>
-                <h1 className="font-mono bg-primary text-primary-content w-full font-bold text-3xl p-3 pl-5 relative z-40 -translate-y-[5px]">
-                    <div className="text-warning">
-                        <StarIcon />
-                        <StarIcon />
-                        <StarIcon />
-                        <StarIcon />
-                        <StarIcon />
-                    </div>
-                </h1>
+            <Marquee autoFill speed={10} className="h-6 row-[2/3] col-[1/-1] absolute -top-6">
+                <span className="font-extrabold text-primary z-10">
+                    VIKY&nbsp;&nbsp;
+                </span>
+            </Marquee>
+            <div className="text-warning font-mono bg-primary w-full font-bold text-3xl p-3 pl-5 relative z-40 -translate-y-[5px] row-[2/3] col-[1/-1]">
+                <StarIcon />
+                <StarIcon />
+                <StarIcon />
+                <StarIcon />
+                <StarIcon />
             </div>
-            <div className=" grid justify-center items-center col-[2/3] row-[1/5] z-40 relative translate-x-10">
+            <div className="col-[2/3] row-[1/5] z-40 relative w-full h-full">
                 <AnimatedMe />
+                {/* <img className="object-cover h-full" src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"/> */}
             </div>
             <div className="col-[1/-1] row-[3/4] p-3 relative z-50 max-w-[50vw] sm:p-10 sm:pr-0 sm:max-w-[70vw] xl:col-[1/2]">
                 <h1 className="font-extrabold">
