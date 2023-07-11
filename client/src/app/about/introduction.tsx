@@ -32,10 +32,10 @@ export const IntroductionComponent = () => {
                     viky
                 </h1>
                 <h1 className="font-extrabold">
-                    .zodiac
+                    .level
                 </h1>
                 <h1 className="pl-5">
-                    intp
+                    ??/??
                 </h1>
                 <h1 className="font-extrabold">
                     .class
@@ -51,7 +51,7 @@ export const IntroductionComponent = () => {
                     VIKY&nbsp;&nbsp;
                 </span>
             </Marquee>
-            <div className="text-warning font-mono bg-primary w-full font-bold text-3xl p-3 pl-5 relative z-40 -translate-y-[5px] row-[2/3] col-[1/-1]">
+            <div className="text-purple-700 font-mono bg-primary w-full font-bold text-3xl p-3 pl-20 absolute z-40 -translate-y-[5px] row-[2/3] col-[1/-1]">
                 <StarIcon />
                 <StarIcon />
                 <StarIcon />
@@ -61,7 +61,7 @@ export const IntroductionComponent = () => {
             <div className="col-[2/3] row-[1/5] z-40 relative w-full h-full">
                 <AnimatedMe />
             </div>
-            <div className="col-[1/-1] row-[3/4] p-3 relative z-50 max-w-[50vw] sm:p-10 sm:pr-0 sm:max-w-[70vw] xl:col-[1/2]">
+            <div className="col-[1/-1] row-[3/4] p-3 pt-10 relative z-50 max-w-[50vw] sm:p-10 sm:pr-0 sm:max-w-[70vw] xl:col-[1/2]">
                 <h1 className="font-extrabold">
                     .abilities
                 </h1>
@@ -73,7 +73,7 @@ export const IntroductionComponent = () => {
                         docs exploration
                     </h1>
                     <h1>
-                        docs exploration
+                        skill exp boost
                     </h1>
                 </div>
                 <h1 className="font-extrabold hidden sm:block">
