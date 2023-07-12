@@ -1,11 +1,8 @@
 "use client"
 import { motion } from "framer-motion";
-import { Footer } from "../footer";
+import { Background } from "../background";
 import { Header } from "../header";
 import { IntroductionComponent } from "./introduction";
-import { useEffect } from "react";
-import { usePathname } from "next/navigation";
-import { Background } from "../background";
 
 export default function Page() {
     return (

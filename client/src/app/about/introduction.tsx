@@ -1,6 +1,5 @@
 "use client"
 
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import StarIcon from '@mui/icons-material/Star';
 import Link from 'next/link';
 import { useRouter } from "next/navigation";

@@ -1,10 +1,9 @@
 "use client"
 
 import CloseIcon from '@mui/icons-material/Close';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const themes = ["march", "light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"]
