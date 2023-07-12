@@ -2,8 +2,7 @@
 
 For developmental purpose, we have 2 separate tags: 
 - Alpha Version
-    - Live1: https://personal-portfolio-git-dev-vikyw89.vercel.app/
-    - Live2: https://vikyw89.github.io/personal-portfolio/
+    - Live: https://personal-portfolio-git-dev-vikyw89.vercel.app/
     - Repo: https://github.com/vikyw89/personal-portfolio
 - Beta Version
     - For releases that look good on Alpha will be graduated to Beta
