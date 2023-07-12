@@ -1,26 +1,30 @@
 import MenuIcon from '@mui/icons-material/Menu'
 import { usePathname, useRouter } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Menu from './menu'
 
 const navHash = {
-  '/': '/about',
-  '/about/': '/'
+  '/': 'about',
+  '/about/': 'home'
 } as any
 
 export const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
   const pathName = usePathname()
+  const [navTo, setNavTo] = useState('about')
   const router = useRouter()
 
-  const openMenuHandler = () => {
+  useEffect(()=>{
+    if(!pathName) return
+    setNavTo(navHash[pathName])
+  },[pathName])
 
+  const openMenuHandler = () => {
     setShowMenu(true)
   }
 
   const navAboutHandler = () => {
-    const navTo = navHash[pathName]
-    router.push(navTo)
+    router.push(`/${navTo === 'home' ? '': navTo}`)
   }
 
   return (
@@ -30,7 +34,7 @@ export const Header = () => {
       </button>
 
       <button className='font-extrabold text-base-content pr-3 ' onClick={navAboutHandler}>
-        <span>.{navHash[pathName].slice(1) || 'home'}</span>
+        <span>{`.${navTo}`}</span>
       </button>
       {showMenu &&
         <Menu props={{ setShowMenu }} />
