@@ -18,6 +18,7 @@ import AnimatedMe2 from './animatedMe2'
 import { Header } from './header'
 import { Footer } from './footer'
 import { ReactFitty } from 'react-fitty'
+import { Scroll } from './scroll'
 
 export default function Home() {
   // const [intro, setIntro] = useState(true)

@@ -2,6 +2,7 @@
 import { motion } from "framer-motion"
 import { Card } from "./card"
 import { ReactFitty } from "react-fitty"
+import { Scroll } from "./scroll"
 
 const data = [
     {

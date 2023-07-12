@@ -39,7 +39,16 @@ export default function Menu({ props }: any) {
         })
     }
     return (
-        <motion.div className='fixed left-0 top-0 bottom-0 bg-secondary text-seconary-content bg-opacity-70 flex flex-col gap-5 p-3 w-52 shadow-sm z-[60] backdrop-blur-sm'
+        <motion.div className='fixed left-0 top-0 bottom-0 bg-secondary text-secondary-content bg-opacity-70 flex flex-col gap-5 p-3 pl-10 w-80 shadow-sm z-[60] backdrop-blur-sm'
+            initial={{
+                x:'-100%',
+            }}
+            animate={{
+                x:'-40px'
+            }}
+            exit={{
+                x:'-100%'
+            }}
         >
             <div className='flex justify-between'>
                 <button onClick={closeMenuHandler} className='btn btn-ghost'>

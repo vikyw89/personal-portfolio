@@ -20,7 +20,7 @@ export type CardProps = {
 
 export const Card = ({ props }: CardProps) => {
     const video: any = useRef(null)
-    const isInView = useInView(video, { amount: 0.01, margin: '-30%' })
+    const isInView = useInView(video, { amount: 1 })
 
     useEffect(() => {
         if (isInView) {
@@ -43,12 +43,10 @@ export const Card = ({ props }: CardProps) => {
                     type: 'spring',
                 }}
                 viewport={{
-                    amount: 0.01,
-                    margin: '-30%'
+                    amount: 1,
                 }}
                 exit={{
                     opacity: 0,
-                    scale: 0,
                 }}
             >
                 <div className="relative w-full" style={{
@@ -61,14 +59,12 @@ export const Card = ({ props }: CardProps) => {
                     <motion.div className="links inset-0 absolute grid grid-flow-col items-end  font-extrabold "
                         initial={{
                             opacity: 0,
-                            scale:0.9
                         }}
                         whileInView={{
                             opacity: 1
                         }}
                         viewport={{
-                            amount: 0.01,
-                            margin: '-30%'
+                            amount: 1
                         }}
                         transition={{
                             type: 'spring',

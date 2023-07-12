@@ -1,22 +1,39 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { ReactFitty } from "react-fitty"
 
 const IsLoading = () => {
     return (
-        <motion.div className="fixed bg-black inset-0"
-            initial={{
-                x:-1000
-            }}
-            animate={{
-                x:0
-            }}
-            exit={{
-                x:-1000
-            }}
-        >
+        <div className="fixed inset-0 bg-transparent">
+            <motion.div className="fixed bg-neutral inset-0 text-neutral-focus"
+                initial={{
+                    y: '-100vh'
+                }}
+                animate={{
+                    y: '-50vh'
+                }}
+                exit={{
+                    y: '-100vh'
+                }}
+            >
 
-        </motion.div>
+            </motion.div>
+            <motion.div className="fixed bg-neutral inset-0 text-neutral-focus"
+                initial={{
+                    y:'100vh'
+                }}
+                animate={{
+                    y: '50vh'
+                }}
+                exit={{
+                    y:'100vh'
+                }}
+
+            >
+
+            </motion.div>
+        </div>
     )
 }
 

@@ -23,8 +23,8 @@ export const IntroductionComponent = () => {
     const router = useRouter()
 
     return (
-        <div className="text-base-content grid grid-cols-[3fr_1fr] relative mt-20 mb-20 row-[repeat(5,min-content)]] self-center xl:grid-cols-[4fr_1fr_2fr]">
-            <div className="row-[1/2] p-3 col-[1/-1] max-w-[50vw] z-50 relative pb-10 sm:p-10">
+        <div className="text-base-content  grid grid-cols-[3fr_1fr] grid-rows-[repeat(5,minmax(45px,max-content))] relative mt-20 mb-20 self-center xl:grid-cols-[4fr_1fr_2fr]">
+            <div className="row-[1/2] p-6 col-[1/-1] max-w-[50vw] z-50 relative pb-10 sm:p-10">
                 <h1 className="font-extrabold">
                     .name
                 </h1>
@@ -46,12 +46,12 @@ export const IntroductionComponent = () => {
                     </h1>
                 </div>
             </div>
-            <Marquee autoFill speed={10} className="h-6 row-[2/3] col-[1/-1] absolute -top-6">
+            <Marquee autoFill speed={10} className="h-6 row-[2/3] col-[1/-1] absolute -top-6 cursor-default">
                 <span className="font-extrabold text-primary z-10">
                     VIKY&nbsp;&nbsp;
                 </span>
             </Marquee>
-            <div className="text-primary-content font-mono bg-primary w-full font-bold text-3xl p-3 pl-20 absolute z-40 -translate-y-[5px] row-[2/3] col-[1/-1]">
+            <div className="text-primary-content font-mono flex items-center bg-primary w-full font-bold p-5 pl-20 absolute z-40 -translate-y-[5px] row-[2/3] col-[1/-1]">
                 <StarIcon />
                 <StarIcon />
                 <StarIcon />
@@ -61,7 +61,7 @@ export const IntroductionComponent = () => {
             <div className="col-[2/3] row-[1/5] z-40 relative w-full h-full">
                 <AnimatedMe />
             </div>
-            <div className="col-[1/-1] row-[3/4] p-3 pt-10 relative z-50 max-w-[50vw] sm:p-10 sm:pr-0 sm:max-w-[70vw] xl:col-[1/2]">
+            <div className="col-[1/-1] row-[3/4] p-6 relative z-50 max-w-[50vw] sm:p-10 sm:pr-0 sm:max-w-[70vw] xl:col-[1/2">
                 <h1 className="font-extrabold">
                     .abilities
                 </h1>
@@ -73,7 +73,7 @@ export const IntroductionComponent = () => {
                         docs exploration
                     </h1>
                     <h1>
-                        skill exp boost
+                        skills exp boost
                     </h1>
                 </div>
                 <h1 className="font-extrabold hidden sm:block">
@@ -106,7 +106,7 @@ export const IntroductionComponent = () => {
                 <h1 className="font-extrabold">
                     .likes
                 </h1>
-                <div className="grid pl-5">
+                <div className="grid pl-5 font-bold">
                     <h1>
                         sci/fi
                     </h1>

@@ -13,7 +13,9 @@ export const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
   const pathName = usePathname()
   const router = useRouter()
+
   const openMenuHandler = () => {
+
     setShowMenu(true)
   }
 
@@ -23,12 +25,12 @@ export const Header = () => {
   }
 
   return (
-    <div className='fixed top-0 left-0 right-0 flex p-3 z-[60] justify-between'>
-      <button onClick={openMenuHandler} className='btn btn-ghost btn-secondary-focus text-secondary-focus' >
+    <div className='fixed top-0 left-0 right-0 flex p-1 z-[60] justify-between'>
+      <button onClick={openMenuHandler} className='btn btn-ghost btn-secondary-focus text-base-content' >
         {!showMenu && <MenuIcon />}
       </button>
 
-      <button className='font-extrabold text-secondary-focus btn btn-ghost' onClick={navAboutHandler}>
+      <button className='font-extrabold text-base-content pr-3 ' onClick={navAboutHandler}>
         <span>.{navHash[pathName].slice(1) || 'home'}</span>
       </button>
       {showMenu &&
