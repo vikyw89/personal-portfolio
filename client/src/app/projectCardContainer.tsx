@@ -1,5 +1,8 @@
 "use client"
+import { motion } from "framer-motion"
 import { Card } from "./card"
+import { ReactFitty } from "react-fitty"
+import { Scroll } from "./scroll"
 
 const data = [
     {
@@ -60,12 +63,20 @@ const data = [
 
 export const ProjectCardContainer = () => {
     return (
-        <div className="flex flex-col overflow-y-scroll overflow-x-hidden gap-3 sm:grid sm:grid-flow-row-dense sm:justify-center sm:overflow-y-hidden sm:gap-10 sm:p-10">
-            {data.map((v, i) => {
-                return (
-                    <Card key={i} props={{ ...v, 'index': i }} />
-                )
-            })}
-        </div>
+        <motion.div
+            exit={{
+                scale: 0,
+                x: 1000
+            }}
+            className="pt-14 pb-14 inset-0 fixed overflow-y-scroll"
+        >
+            <div className="flex flex-col w-full overflow-x-hidden gap-3 sm:grid sm:grid-flow-row-dense sm:justify-center sm:overflow-y-hidden sm:gap-10 sm:p-10">
+                {data.map((v, i) => {
+                    return (
+                        <Card key={i} props={{ ...v, 'index': i }} />
+                    )
+                })}
+            </div>
+        </motion.div>
     )
 }

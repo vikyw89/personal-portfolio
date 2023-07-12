@@ -1,30 +1,18 @@
 "use client"
-import { useState } from 'react'
-import { BackgroundComponent } from './background'
-import { ForegroundComponent } from './foreground'
-import { HeaderComponent } from './headerComponent'
-import { IntroComponent } from './intro'
+import { motion } from 'framer-motion'
+import { useRouter } from 'next/navigation'
+import { Background } from './background'
+import { Header } from './header'
 import { ProjectCardContainer } from './projectCardContainer'
 
 export default function Home() {
-  const [intro, setIntro] = useState(true)
 
   return (
-    <main className="content grid flex-1">
-      {intro &&
-        <>
-          <IntroComponent props={{ setIntro }} />
-          <ForegroundComponent />
-        </>
-      }
-      {!intro &&
-        <>
-          <HeaderComponent />
-          <ProjectCardContainer />
-        </>
-      }
-      {/* <BackgroundComponent /> */}
-      {/* <ForegroundComponent /> */}
-    </main >
+    <motion.div className="content grid text-base-content z-0 justify-center">
+      <Header />
+      <ProjectCardContainer/>
+      {/* <Footer /> */}
+      <Background />
+    </motion.div >
   )
 }
