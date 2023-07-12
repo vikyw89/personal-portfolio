@@ -1,6 +1,5 @@
-"use client"
+'use client'
 import { motion } from 'framer-motion'
-import { useRouter } from 'next/navigation'
 import { Background } from './background'
 import { Header } from './header'
 import { ProjectCardContainer } from './projectCardContainer'

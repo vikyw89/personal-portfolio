@@ -1,5 +1,5 @@
 
-import { Suspense } from 'react'
+import React, { Suspense } from 'react'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Loading from './loading'
@@ -7,7 +7,7 @@ import Loading from './loading'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: `Viky's Portfolio`,
+  title: 'Viky\'s Portfolio',
   description: 'Welcome to my portfolio',
 }
 

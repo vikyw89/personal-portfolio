@@ -1,4 +1,3 @@
-import ArrowRightIcon from '@mui/icons-material/ArrowRight'
 import MenuIcon from '@mui/icons-material/Menu'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState } from 'react'
