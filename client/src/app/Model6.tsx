@@ -13,7 +13,6 @@ export function Model(props:any) {
   const { actions } = useAnimations(animations, group) as any
   
   useEffect(()=>{
-    console.log("🚀 ~ file: Model6.tsx:12 ~ Model ~ nodes:", loader)
     actions[`IdleV4.2(maya_head)`].play()
   },[])
   return (

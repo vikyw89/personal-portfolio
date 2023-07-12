@@ -39,10 +39,10 @@ export default function Menu({ props }: any) {
         })
     }
     return (
-        <motion.div className='fixed left-0 top-0 bottom-0 bg-base-200 text-base-content flex flex-col gap-5 p-3 w-52 shadow-sm z-[60] bg-opacity-100'
+        <motion.div className='fixed left-0 top-0 bottom-0 bg-secondary text-seconary-content bg-opacity-70 flex flex-col gap-5 p-3 w-52 shadow-sm z-[60] backdrop-blur-sm'
         >
             <div className='flex justify-between'>
-                <button onClick={closeMenuHandler}>
+                <button onClick={closeMenuHandler} className='btn btn-ghost'>
                     <CloseIcon />
                 </button>
             </div>
@@ -51,12 +51,12 @@ export default function Menu({ props }: any) {
                     return (
                         <li key={i} className='pl-5'>
                             <Link target="_blank" rel="noopener noreferrer" href={v[1]}>
-                                <span>.{v[0]}</span>
+                                <span className='font-bold'>.{v[0]}</span>
                             </Link>
                         </li>
                     )
                 })}
-                <li onClick={toggleTheme} className='cursor-pointer'>Active Theme<p>{themes[themeIndex]}</p></li>
+                <li onClick={toggleTheme} className='cursor-pointer pl-5 font-bold'>.{themes[themeIndex]}</li>
             </ul>
         </motion.div>
     )

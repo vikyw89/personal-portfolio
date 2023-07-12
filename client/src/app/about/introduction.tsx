@@ -51,7 +51,7 @@ export const IntroductionComponent = () => {
                     VIKY&nbsp;&nbsp;
                 </span>
             </Marquee>
-            <div className="text-warning font-mono bg-primary w-full font-bold text-3xl p-3 pl-20 absolute z-40 -translate-y-[5px] row-[2/3] col-[1/-1]">
+            <div className="text-primary-content font-mono bg-primary w-full font-bold text-3xl p-3 pl-20 absolute z-40 -translate-y-[5px] row-[2/3] col-[1/-1]">
                 <StarIcon />
                 <StarIcon />
                 <StarIcon />

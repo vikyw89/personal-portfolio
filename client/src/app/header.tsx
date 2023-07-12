@@ -23,17 +23,17 @@ export const Header = () => {
   }
 
   return (
-    <div className='fixed top-0 left-0 right-0 flex justify-between p-3 z-[60]'>
-      <button onClick={openMenuHandler}>
-        <MenuIcon />
+    <div className='fixed top-0 left-0 right-0 flex p-3 z-[60] justify-between'>
+      <button onClick={openMenuHandler} className='btn btn-ghost btn-secondary-focus text-secondary-focus' >
+        {!showMenu && <MenuIcon />}
       </button>
 
+      <button className='font-extrabold text-secondary-focus btn btn-ghost' onClick={navAboutHandler}>
+        <span>.{navHash[pathName].slice(1) || 'home'}</span>
+      </button>
       {showMenu &&
         <Menu props={{ setShowMenu }} />
       }
-      <button className='flex justify-center items-center font-extrabold' onClick={navAboutHandler}>
-        <span>.{navHash[pathName].slice(1) || 'home'}</span>
-      </button>
     </div>
   )
 }

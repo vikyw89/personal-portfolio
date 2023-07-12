@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en" data-theme="dracula">
+    <html lang="en" data-theme="cupcake">
       <body className={inter.className}>
         <Suspense fallback={<Loading />}>
           <main className='fixed inset-0 bg-base-100 text-base-content overflow-hidden -z-50'>
