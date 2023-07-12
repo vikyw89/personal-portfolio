@@ -13,7 +13,7 @@ export default function Page() {
             <motion.div className="fixed inset-0 content grid text-base-content z-0">
                 <Header />
                 <IntroductionComponent />
-                <Footer />
+                {/* <Footer /> */}
                 <Background />
             </motion.div>
         </>

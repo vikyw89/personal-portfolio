@@ -17,6 +17,7 @@ import BackgroundComponent3 from './background3'
 import AnimatedMe2 from './animatedMe2'
 import { Header } from './header'
 import { Footer } from './footer'
+import { ReactFitty } from 'react-fitty'
 
 export default function Home() {
   // const [intro, setIntro] = useState(true)
@@ -31,28 +32,11 @@ export default function Home() {
   }
 
   return (
-    <motion.div className="fixed inset-0 content flex flex-col text-base-content z-0 justify-center">
+    <motion.div className="content grid text-base-content z-0 justify-center">
       <Header />
-      <IntroductionComponent />
-      <Footer/>
-      {/* <BackgroundComponent2/> */}
-      {/* <BackgroundComponent3/> */}
-      {/* {intro &&
-        <>
-          <IntroComponent props={{ setIntro }} />
-          <ForegroundComponent />
-        </>
-      } */}
-      {/* <AnimatedMe /> */}
-      {/* {intro &&
-          <>
-            <HeaderComponent />
-            <IntroductionComponent />
-            <ProjectCardContainer />
-          </>
-        } */}
+      <ProjectCardContainer/>
+      {/* <Footer /> */}
       <Background />
-      {/* <ForegroundComponent /> */}
     </motion.div >
   )
 }
