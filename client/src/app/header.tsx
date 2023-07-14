@@ -28,7 +28,7 @@ export const Header = () => {
   }
 
   return (
-    <div className='fixed top-0 left-0 right-0 flex p-1 z-[60] justify-between'>
+    <header className='fixed top-0 left-0 right-0 flex p-1 z-[60] justify-between'>
       <button onClick={openMenuHandler} className='btn btn-ghost btn-secondary-focus text-base-content' >
         {!showMenu && <MenuIcon />}
       </button>
@@ -39,6 +39,6 @@ export const Header = () => {
       {showMenu &&
         <Menu props={{ setShowMenu }} />
       }
-    </div>
+    </header>
   )
 }
