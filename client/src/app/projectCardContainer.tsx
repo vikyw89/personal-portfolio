@@ -10,7 +10,7 @@ const data = [
     tech: ['NextJS', 'Docker', 'noSQL', 'Firebase', 'ExpressJS', 'NodeJS', 'MaterialUI'],
     liveLink: 'https://myphonebook-app-dev.web.app/',
     repoLink: 'https://github.com/weaponsforge/my-phonebook',
-    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FScreencast%20from%202023-06-29%2012-05-46.webm?alt=media&token=0e7cc66f-7e74-421e-bdec-5ca34dadf3a2'
+    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FmyPhonebookCompressed.webm?alt=media&token=f46a0436-a5f3-4832-bca8-0c36e0b8cd44'
   },
   {
     title: 'pinterestClone',
@@ -19,7 +19,7 @@ const data = [
     tech: ['NextJS', 'postgreSQL', 'Supabase', 'Cloudinary', 'MaterialUI', 'TailwindCSS', 'DaisyUI'],
     liveLink: 'https://pinterest-clone-lemon.vercel.app/',
     repoLink: 'https://github.com/vikyw89/pinterestClone/my-phonebook',
-    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FScreencast%20from%202023-06-29%2015-47-33.webm?alt=media&token=19cb540a-4a88-43f3-932e-b80fff12be4d'
+    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FpinterestCompressed.webm?alt=media&token=2c26f834-6cfc-4b02-ad9a-ecd711e7d549'
   },
   {
     title: 'wheresWaldo',
@@ -28,7 +28,7 @@ const data = [
     tech: ['NextJS', 'Firebase', 'CSS Module'],
     liveLink: 'https://whereswaldo-f62b8.firebaseapp.com/',
     repoLink: 'https://github.com/vikyw89/wheresWaldo',
-    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2Fwaldo.webm?alt=media&token=f11c4a60-bec3-40b3-9204-4c34edebae00'
+    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FwheresWaldoCompressed.webm?alt=media&token=85b99fb9-b6bd-4e4e-bc4d-13dbfff06cd8'
   },
   {
     title: 'ticTacToe',
@@ -37,7 +37,7 @@ const data = [
     tech: ['VanillaJS', 'HTML', 'CSS'],
     liveLink: 'https://vikyw89.github.io/ticTacToe/',
     repoLink: 'https://github.com/vikyw89/ticTacToe',
-    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FticTacToe.webm?alt=media&token=21b52588-96a5-40b2-8180-219fd26e720a'
+    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FticTacToeCompressed.webm?alt=media&token=214c9030-d02a-44a6-bc60-a6e0a4f64a5f'
   },
   {
     title: 'useSyncV',
@@ -46,7 +46,7 @@ const data = [
     tech: ['Typescript', 'NodeJS', 'NPM', 'React'],
     liveLink: 'https://www.npmjs.com/package/use-sync-v',
     repoLink: 'https://github.com/vikyw89/useSyncV',
-    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FScreencast%20from%202023-06-29%2017-20-13.webm?alt=media&token=33ec5152-7fea-47b6-bc3f-d10c59acb10f'
+    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FuseSyncVcompressed.webm?alt=media&token=89b0e67c-36cb-4dca-8c79-2ec9d2af13df'
   },
   {
     title: 'calculator',
@@ -55,7 +55,7 @@ const data = [
     tech: ['VanillaJS', 'CSS', 'HTML'],
     liveLink: 'https://vikyw89.github.io/calculator/',
     repoLink: 'https://github.com/vikyw89/calculator',
-    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FScreencast%20from%202023-06-29%2016-09-30.webm?alt=media&token=f1f2a0a2-c615-46ed-ae52-6181d7c48cf3'
+    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FcalculatorCompressed.webm?alt=media&token=0d224592-6ac6-4712-b734-04e9677dd291'
   },
 ]
 
