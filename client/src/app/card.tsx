@@ -44,15 +44,13 @@ export const Card = ({ props }: CardProps) => {
           type: 'spring',
         }}
         viewport={{
-          amount: 1,
+          amount: 0.75,
         }}
         exit={{
           opacity: 0,
         }}
       >
-        <div className="relative w-full" style={{
-          // gridColumnStart: (props.index % 2 === 0) ? 2 : 1
-        }}>
+        <div className="relative w-full">
           <motion.video preload="auto" className="aspect-square bg-primary bg-opacity-50 backdrop-blur-sm w-full shadow-2xl object-cover sm:aspect-square md:aspect-video" muted loop ref={video}
           >
             <source src={props.videoSrc} type="video/webm" />
