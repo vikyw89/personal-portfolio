@@ -1,5 +1,5 @@
 'use client'
-import { motion } from 'framer-motion'
+
 import { Background } from './background'
 import { Header } from './header'
 import { ProjectCardContainer } from './projectCardContainer'
