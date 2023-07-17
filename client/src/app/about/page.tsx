@@ -6,7 +6,7 @@ import { IntroductionComponent } from './introduction'
 
 export default function Page() {
   return (
-    <div className="content grid text-base-content z-0 justify-center">
+    <div className="content grid text-base-content z-0 overflow-hidden">
       <Header />
       <IntroductionComponent />
       {/* <Footer /> */}

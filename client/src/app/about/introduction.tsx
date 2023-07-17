@@ -1,6 +1,7 @@
 'use client'
 
 import StarIcon from '@mui/icons-material/Star'
+import { Variants, motion } from 'framer-motion'
 import Link from 'next/link'
 import Marquee from 'react-fast-marquee'
 import { AnimatedMe } from './animatedMe'
@@ -15,147 +16,202 @@ const links = {
   resume: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/030723_Daniel_Viky_Wahjoedin_Resume.pdf?alt=media&token=5e3a5a3a-6fb4-4c84-a1c8-81a18e8da169'
 }
 
+const itemVariants: Variants = {
+  intro: {
+    opacity: 1,
+    clipPath: ['inset(0 100% 0 0)', 'inset(0 0 0 0)'],
+  },
+}
+
 export const IntroductionComponent = () => {
 
   return (
-    <div className="text-base-content  grid grid-cols-[3fr_1fr] grid-rows-[repeat(5,minmax(45px,max-content))] relative mt-20 mb-20 self-center xl:grid-cols-[4fr_1fr_2fr]">
-      <div className="row-[1/2] p-6 col-[1/-1] max-w-[50vw] z-50 relative pb-10 sm:p-10">
-        <h1 className="font-extrabold">
+    <motion.div className="text-base-content  grid grid-cols-[3fr_1fr] grid-rows-[repeat(5,minmax(45px,max-content))] relative mt-20 mb-20 self-center xl:grid-cols-[4fr_1fr_2fr]"
+      initial={{
+        clipPath: 'inset(0 100% 0 0)'
+      }}
+      variants={{
+        intro: {
+          clipPath: 'inset(0 0 0 0)',
+          transition: {
+            type: 'spring',
+            bounce: 0,
+            duration: 0.7,
+            delayChildren: 0.3,
+            staggerChildren: 0.3
+          }
+        }
+      }}
+      animate='intro'
+    >
+      <motion.div className="row-[1/2] p-6 col-[1/-1] max-w-[50vw] z-50 relative pb-10 sm:p-10 intro">
+        <motion.h1 className="font-extrabold" variants={itemVariants}>
           .name
-        </h1>
-        <h1 className="pl-5">
+        </motion.h1>
+        <motion.h1 className="pl-5" variants={itemVariants}>
           viky
-        </h1>
-        <h1 className="font-extrabold">
+        </motion.h1>
+        <motion.h1 className="font-extrabold" variants={itemVariants}>
           .level
-        </h1>
-        <h1 className="pl-5">
+        </motion.h1>
+        <motion.h1 className="pl-5" variants={itemVariants}>
           ??/??
-        </h1>
-        <h1 className="font-extrabold">
+        </motion.h1>
+        <motion.h1 className="font-extrabold" variants={itemVariants}>
           .class
-        </h1>
-        <div className="grid pl-5">
-          <h1>
+        </motion.h1>
+        <motion.div className="grid pl-5" variants={itemVariants}>
+          <motion.h1 variants={itemVariants}>
             web developer
-          </h1>
-        </div>
-      </div>
+          </motion.h1>
+        </motion.div>
+      </motion.div>
       <Marquee autoFill speed={10} className="h-6 row-[2/3] col-[1/-1] absolute -top-6 cursor-default">
-        <span className="font-extrabold text-primary z-10">
+        <motion.span className="font-extrabold text-primary z-10"
+          initial={{
+            opacity: 0
+          }}
+          animate={{
+            opacity: 1
+          }}
+          transition={{
+            delay: 3 + (5 * 0.3)
+          }}
+        >
           VIKY&nbsp;&nbsp;
-        </span>
+        </motion.span>
       </Marquee>
-      <div className="text-primary-content font-mono flex items-center bg-primary w-full font-bold p-5 pl-20 absolute z-40 -translate-y-[5px] row-[2/3] col-[1/-1]">
-        <StarIcon />
-        <StarIcon />
-        <StarIcon />
-        <StarIcon />
-        <StarIcon />
-      </div>
-      <div className="col-[2/3] row-[1/5] z-40 relative w-full h-full">
+      <motion.div className="text-primary-content font-mono flex items-center bg-primary w-full font-bold p-5 pl-20 absolute z-40 row-[2/3] col-[1/-1]"
+        initial={{
+          scaleY: 0,
+          scaleX: 0
+        }}
+        animate={{
+          scaleY: [0, 0.02, 0.2, 0.2, 1],
+          scaleX: [0, 0, 1, 1, 1]
+        }}
+        transition={{
+          duration: 3
+        }}
+      >
+        {new Array(5).fill(null).map((v, i) => {
+          return (
+            <motion.li key={i}
+              initial={{ scale: 0 }}
+              animate={{ scale: [0, 10, 1] }}
+              transition={{
+                type: 'spring',
+                damping: 2,
+                delay: (i * 0.3) + 3
+              }}
+              className='list-none'>
+              <StarIcon />
+            </motion.li>)
+        })}
+      </motion.div>
+      <motion.div className="col-[2/3] row-[1/5] z-40 relative w-full h-full" variants={itemVariants}>
         <AnimatedMe />
-      </div>
-      <div className="col-[1/-1] row-[3/4] p-6 relative z-50 max-w-[50vw] sm:p-10 sm:pr-0 sm:max-w-[70vw] xl:col-[1/2">
-        <h1 className="font-extrabold">
+      </motion.div>
+      <motion.div className="col-[1/-1] row-[3/4] p-6 relative z-50 max-w-[50vw] sm:p-10 sm:pr-0 sm:max-w-[70vw] xl:col-[1/2">
+        <motion.h1 className="font-extrabold" variants={itemVariants}>
           .abilities
-        </h1>
-        <div className="grid pl-5">
-          <h1>
+        </motion.h1>
+        <motion.div className="grid pl-5" variants={itemVariants}>
+          <motion.h1 variants={itemVariants}>
             self learner
-          </h1>
-          <h1>
+          </motion.h1 >
+          <motion.h1 variants={itemVariants}>
             docs exploration
-          </h1>
-          <h1>
+          </motion.h1 >
+          <motion.h1 variants={itemVariants}>
             skills exp boost
-          </h1>
-        </div>
-        <h1 className="font-extrabold hidden sm:block">
+          </motion.h1 >
+        </motion.div>
+        <motion.h1 className="font-extrabold hidden sm:block" variants={itemVariants}>
           .technicalExperiences
-        </h1>
-        <div className="hidden sm:grid pl-5">
-          <h1>
+        </motion.h1>
+        <motion.div className="hidden sm:grid pl-5">
+          <motion.h1 variants={itemVariants}>
             languages: Javascript, Typescript, Python, HTML5, CSS3, SQL, Python, C
-          </h1>
-          <h1>
+          </motion.h1 >
+          <motion.h1 variants={itemVariants}>
             databases: postgresql, sqlite, firestore, cloudinary, mongodb
-          </h1>
-          <h1>
+          </motion.h1>
+          <motion.h1 variants={itemVariants}>
             ci/cd: github action
-          </h1>
-          <h1>
+          </motion.h1>
+          <motion.h1 variants={itemVariants}>
             orm: prisma
-          </h1>
-          <h1>
+          </motion.h1>
+          <motion.h1 variants={itemVariants}>
             frameworks: Next.js, Express.js, Flask
-          </h1>
-          <h1>
+          </motion.h1>
+          <motion.h1 variants={itemVariants}>
             ui-frameworks: bootstrap, TailwindCSS, Material-ui, daisy-UI, framer-motion, three.js
-          </h1>
-          <h1>
+          </motion.h1>
+          <motion.h1 variants={itemVariants}>
             state-management: redux, zustand
-          </h1>
-          <h1>
+          </motion.h1>
+          <motion.h1 variants={itemVariants}>
             secret-management: infisical
-          </h1>
-          <h1>
+          </motion.h1>
+          <motion.h1 variants={itemVariants}>
             tooling: eslint, Typedoc, vscode, prettier,
-          </h1>
-          <h1>
+          </motion.h1>
+          <motion.h1 variants={itemVariants}>
             builder: vite, webpack
-          </h1>
-          <h1>
+          </motion.h1>
+          <motion.h1 variants={itemVariants}>
             ...
-          </h1>
-        </div>
-        <h1 className="font-extrabold">
+          </motion.h1>
+        </motion.div>
+        <motion.h1 className="font-extrabold" variants={itemVariants}>
           .backStory
-        </h1>
-        <div className="grid pl-5">
-          <h1>
+        </motion.h1>
+        <motion.div className="grid pl-5">
+          <motion.h1 variants={itemVariants}>
             {backStory}
-          </h1>
-        </div>
-      </div>
+          </motion.h1>
+        </motion.div>
+      </motion.div>
       <div className="inventory hidden xl:col-[3/-1] xl:row-[1/2] xl:z-50 xl:p-10 xl:block">
-        <h1 className="font-extrabold">
+        <motion.h1 className="font-extrabold" variants={itemVariants}>
           .likes
-        </h1>
-        <div className="grid pl-5 font-bold">
-          <h1>
+        </motion.h1>
+        <motion.div className="grid pl-5 font-bold" variants={itemVariants}>
+          <motion.h1 variants={itemVariants}>
             OS: fedora, android
-          </h1>
-          <h1>
+          </motion.h1>
+          <motion.h1 variants={itemVariants}>
             genre: sci/fi, adventure, fantasy
-          </h1>
-          <h1>
+          </motion.h1>
+          <motion.h1 variants={itemVariants}>
             music: anything
-          </h1>
-          <h1>
+          </motion.h1>
+          <motion.h1 variants={itemVariants}>
             movie: the one that doesn&apos;t make me sleepy
-          </h1>
-          <h1>
+          </motion.h1>
+          <motion.h1 variants={itemVariants}>
             person: Irene
-          </h1>
-        </div>
+          </motion.h1>
+        </motion.div>
       </div>
-      <div className="inventory hidden xl:col-[3/-1] xl:row-[3/4] xl:z-50 xl:p-10 xl:block">
-        <h1 className="font-extrabold">
+      <motion.div className="inventory hidden xl:col-[3/-1] xl:row-[3/4] xl:z-50 xl:p-10 xl:block">
+        <motion.h1 className="font-extrabold" variants={itemVariants}>
           .links
-        </h1>
+        </motion.h1>
         <ul className='grid pl-5'>
           {Object.entries(links).map((v, i) => {
             return (
-              <li key={i}>
+              <motion.li key={i} variants={itemVariants}>
                 <Link target="_blank" rel="noopener noreferrer" href={v[1]}>
                   <span>.{v[0]}</span>
                 </Link>
-              </li>
+              </motion.li>
             )
           })}
         </ul>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
