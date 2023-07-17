@@ -28,12 +28,12 @@ export const Header = () => {
   }
 
   return (
-    <header className='fixed top-0 left-0 right-0 flex p-1 z-[60] justify-between'>
-      <button onClick={openMenuHandler} className='btn btn-ghost btn-secondary-focus text-base-content' >
+    <header className='fixed top-0 left-0 right-0 flex p-1 z-[60] justify-between mix-blend-difference text-white'>
+      <button onClick={openMenuHandler} className='btn btn-ghost btn-secondary-focus ' >
         {!showMenu && <MenuIcon />}
       </button>
 
-      <button className='font-extrabold text-base-content pr-3 ' onClick={navAboutHandler}>
+      <button className='font-extrabold  pr-3 ' onClick={navAboutHandler}>
         <span>{`.${navTo}`}</span>
       </button>
       {showMenu &&
