@@ -51,10 +51,10 @@ export const Card = ({ props }: CardProps) => {
         }}
       >
         <div className="relative w-full">
-          <motion.video preload="auto" className="aspect-square bg-primary bg-opacity-50 backdrop-blur-sm w-full shadow-2xl object-cover sm:aspect-square md:aspect-video" muted loop ref={video}
+          <video preload="auto" className="aspect-square bg-primary bg-opacity-50 backdrop-blur-sm w-full shadow-2xl object-cover sm:aspect-square md:aspect-video" muted loop ref={video}
           >
             <source src={props.videoSrc} type="video/webm" />
-          </motion.video>
+          </video>
           <motion.div className="links inset-0 absolute grid grid-flow-col items-end  font-extrabold "
             initial={{
               opacity: 0,
