@@ -7,11 +7,11 @@ import { ProjectCardContainer } from './projectCardContainer'
 export default function Home() {
 
   return (
-    <motion.div className="content grid text-base-content z-0 justify-center">
+    <div className="content grid text-base-content z-0 justify-center">
       <Header />
       <ProjectCardContainer/>
       {/* <Footer /> */}
       <Background />
-    </motion.div >
+    </div >
   )
 }

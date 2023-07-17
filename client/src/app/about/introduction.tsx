@@ -5,8 +5,7 @@ import Link from 'next/link'
 import Marquee from 'react-fast-marquee'
 import { AnimatedMe } from './animatedMe'
 
-
-const backStory = 'a nobody with a mixed experience in architectural engineering and web developments'
+const backStory = 'someone with a mixed experience in architectural engineering and web developments'
 const links = {
   linkedIn: 'https://www.linkedin.com/in/vikyweb/',
   github: 'https://github.com/vikyw89',
@@ -22,29 +21,29 @@ export const IntroductionComponent = () => {
     <div className="text-base-content  grid grid-cols-[3fr_1fr] grid-rows-[repeat(5,minmax(45px,max-content))] relative mt-20 mb-20 self-center xl:grid-cols-[4fr_1fr_2fr]">
       <div className="row-[1/2] p-6 col-[1/-1] max-w-[50vw] z-50 relative pb-10 sm:p-10">
         <h1 className="font-extrabold">
-                    .name
+          .name
         </h1>
         <h1 className="pl-5">
-                    viky
+          viky
         </h1>
         <h1 className="font-extrabold">
-                    .level
+          .level
         </h1>
         <h1 className="pl-5">
-                    ??/??
+          ??/??
         </h1>
         <h1 className="font-extrabold">
-                    .class
+          .class
         </h1>
         <div className="grid pl-5">
           <h1>
-                        web developer
+            web developer
           </h1>
         </div>
       </div>
       <Marquee autoFill speed={10} className="h-6 row-[2/3] col-[1/-1] absolute -top-6 cursor-default">
         <span className="font-extrabold text-primary z-10">
-                    VIKY&nbsp;&nbsp;
+          VIKY&nbsp;&nbsp;
         </span>
       </Marquee>
       <div className="text-primary-content font-mono flex items-center bg-primary w-full font-bold p-5 pl-20 absolute z-40 -translate-y-[5px] row-[2/3] col-[1/-1]">
@@ -59,38 +58,59 @@ export const IntroductionComponent = () => {
       </div>
       <div className="col-[1/-1] row-[3/4] p-6 relative z-50 max-w-[50vw] sm:p-10 sm:pr-0 sm:max-w-[70vw] xl:col-[1/2">
         <h1 className="font-extrabold">
-                    .abilities
+          .abilities
         </h1>
         <div className="grid pl-5">
           <h1>
-                        self learner
+            self learner
           </h1>
           <h1>
-                        docs exploration
+            docs exploration
           </h1>
           <h1>
-                        skills exp boost
+            skills exp boost
           </h1>
         </div>
         <h1 className="font-extrabold hidden sm:block">
-                    .equipments
+          .technicalExperiences
         </h1>
         <div className="hidden sm:grid pl-5">
           <h1>
-                        frontend: nextjs, react, vanilla, tailwindcss, materialui, daisyui, bootstrap
+            languages: Javascript, Typescript, Python, HTML5, CSS3, SQL, Python, C
           </h1>
           <h1>
-                        backend: nextjs, nodejs, flask, nestjs
+            databases: postgresql, sqlite, firestore, cloudinary, mongodb
           </h1>
           <h1>
-                        ci/cd: github action
+            ci/cd: github action
           </h1>
           <h1>
-                        databases: postgresql, sqlite, firestore, cloudinary, mongodb
+            orm: prisma
+          </h1>
+          <h1>
+            frameworks: Next.js, Express.js, Flask
+          </h1>
+          <h1>
+            ui-frameworks: bootstrap, TailwindCSS, Material-ui, daisy-UI, framer-motion, three.js
+          </h1>
+          <h1>
+            state-management: redux, zustand
+          </h1>
+          <h1>
+            secret-management: infisical
+          </h1>
+          <h1>
+            tooling: eslint, Typedoc, vscode, prettier,
+          </h1>
+          <h1>
+            builder: vite, webpack
+          </h1>
+          <h1>
+            ...
           </h1>
         </div>
         <h1 className="font-extrabold">
-                    .backStory
+          .backStory
         </h1>
         <div className="grid pl-5">
           <h1>
@@ -100,26 +120,29 @@ export const IntroductionComponent = () => {
       </div>
       <div className="inventory hidden xl:col-[3/-1] xl:row-[1/2] xl:z-50 xl:p-10 xl:block">
         <h1 className="font-extrabold">
-                    .likes
+          .likes
         </h1>
         <div className="grid pl-5 font-bold">
           <h1>
-                        sci/fi
+            OS: fedora, android
           </h1>
           <h1>
-                        drama
+            genre: sci/fi, adventure, fantasy
           </h1>
           <h1>
-                        music
+            music: anything
           </h1>
           <h1>
-                        irene
+            movie: the one that doesn't make me sleepy
+          </h1>
+          <h1>
+            person: Irene
           </h1>
         </div>
       </div>
       <div className="inventory hidden xl:col-[3/-1] xl:row-[3/4] xl:z-50 xl:p-10 xl:block">
         <h1 className="font-extrabold">
-                    .links
+          .links
         </h1>
         <ul className='grid pl-5'>
           {Object.entries(links).map((v, i) => {
