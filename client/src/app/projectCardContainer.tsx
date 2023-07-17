@@ -18,7 +18,7 @@ const data = [
     description: 'a responsive pinterest clone with a twist',
     tech: ['NextJS', 'postgreSQL', 'Supabase', 'Cloudinary', 'MaterialUI', 'TailwindCSS', 'DaisyUI'],
     liveLink: 'https://pinterest-clone-lemon.vercel.app/',
-    repoLink: 'https://github.com/vikyw89/pinterestClone/my-phonebook',
+    repoLink: 'https://github.com/vikyw89/pinterestClone',
     videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FpinterestCompressed.webm?alt=media&token=2c26f834-6cfc-4b02-ad9a-ecd711e7d549'
   },
   {
