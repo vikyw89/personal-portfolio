@@ -18,7 +18,7 @@ const data = [
     description: 'a responsive pinterest clone with a twist',
     tech: ['NextJS', 'postgreSQL', 'Supabase', 'Cloudinary', 'MaterialUI', 'TailwindCSS', 'DaisyUI'],
     liveLink: 'https://pinterest-clone-lemon.vercel.app/',
-    repoLink: 'https://github.com/vikyw89/pinterestClone/my-phonebook',
+    repoLink: 'https://github.com/vikyw89/pinterestClone',
     videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FpinterestCompressed.webm?alt=media&token=2c26f834-6cfc-4b02-ad9a-ecd711e7d549'
   },
   {
@@ -62,10 +62,6 @@ const data = [
 export const ProjectCardContainer = () => {
   return (
     <motion.div
-      exit={{
-        scale: 0,
-        x: 1000
-      }}
       className="pt-14 pb-14 inset-0 fixed overflow-y-scroll"
     >
       <div className="flex flex-col w-full overflow-x-hidden gap-3 sm:grid sm:grid-flow-row-dense sm:justify-center sm:overflow-y-hidden sm:gap-10 sm:p-10">

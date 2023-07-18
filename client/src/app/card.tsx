@@ -22,7 +22,7 @@ export type CardProps = {
 export const Card = ({ props }: CardProps) => {
   const video = useRef(null) as any
   const [card, animate] = useAnimate()
-  const cardIsInView = useInView(card, { amount: 0.3 })
+  const cardIsInView = useInView(card, { amount: 0.1 })
   const videoIsInView = useInView(video, { margin:'-40%' })
 
   useEffect(() => {
