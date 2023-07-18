@@ -1,4 +1,6 @@
+'use client'
 import MenuIcon from '@mui/icons-material/Menu'
+import { motion } from 'framer-motion'
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Menu from './menu'
@@ -23,7 +25,7 @@ export const Header = () => {
     setShowMenu(true)
   }
 
-  const navAboutHandler = () => {
+  const navHandler = () => {
     router.push(`/${navTo === 'home' ? '' : navTo}`)
   }
 
@@ -33,10 +35,10 @@ export const Header = () => {
         <button onClick={openMenuHandler} className='btn btn-ghost btn-secondary-focus' >
           {!showMenu && <MenuIcon />}
         </button>
-
-        <button className='font-extrabold pr-3 ' onClick={navAboutHandler}>
+        <motion.button className='font-extrabold pr-3 mix-blend-normal' onClick={navHandler}
+        >
           <span>{`.${navTo}`}</span>
-        </button>
+        </motion.button>
       </header>
       {
         showMenu &&

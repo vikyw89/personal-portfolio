@@ -62,10 +62,6 @@ const data = [
 export const ProjectCardContainer = () => {
   return (
     <motion.div
-      exit={{
-        scale: 0,
-        x: 1000
-      }}
       className="pt-14 pb-14 inset-0 fixed overflow-y-scroll"
     >
       <div className="flex flex-col w-full overflow-x-hidden gap-3 sm:grid sm:grid-flow-row-dense sm:justify-center sm:overflow-y-hidden sm:gap-10 sm:p-10">

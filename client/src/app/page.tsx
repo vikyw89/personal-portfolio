@@ -1,17 +1,14 @@
 'use client'
 
-import { Background } from './background'
-import { Header } from './header'
 import { ProjectCardContainer } from './projectCardContainer'
+import { motion } from 'framer-motion'
 
-export default function Home() {
+export default function Page() {
 
   return (
-    <div className="content grid text-base-content z-0 justify-center">
-      <Header />
-      <ProjectCardContainer/>
-      {/* <Footer /> */}
-      <Background />
-    </div >
+    <motion.div className="content grid text-base-content z-0 justify-center"
+    >
+      <ProjectCardContainer />
+    </motion.div >
   )
 }

@@ -13,7 +13,7 @@ const content = {
     gmail: 'vikyw89@gmail.com',
     whatsApp: `https://wa.me/+6281234001700?text=${encodeURIComponent('I found you from your portfolio site')}`,
     repo: 'https://github.com/vikyw89/personal-portfolio',
-    resume: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/030723_Daniel_Viky_Wahjoedin_Resume.pdf?alt=media&token=5e3a5a3a-6fb4-4c84-a1c8-81a18e8da169'
+    // resume: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/030723_Daniel_Viky_Wahjoedin_Resume.pdf?alt=media&token=5e3a5a3a-6fb4-4c84-a1c8-81a18e8da169'
   },
   backstory: 'someone with a mixed experience in architectural engineering and web developments',
   bio: {
@@ -91,8 +91,10 @@ export const IntroductionComponent = () => {
           }
         }
       }}
-      animate='intro'
-    >
+      exit={{
+        clipPath: 'inset(0 100% 0 0)'
+      }}
+      animate='intro'>
       <motion.div className="row-[1/2] p-6 col-[1/-1] max-w-[50vw] z-50 relative pb-10 sm:p-10 intro">
         {Object.entries(content.bio).map((v, i) => {
           return (
@@ -157,13 +159,15 @@ export const IntroductionComponent = () => {
         <motion.h1 className="font-extrabold" variants={itemVariants}>
           .abilities
         </motion.h1>
-        {content.abilities.map((v, i) => {
-          return (
-            <motion.h1 key={i} variants={itemVariants} className='pl-5'>
-              {v}
-            </motion.h1 >
-          )
-        })}
+        <motion.div>
+          {content.abilities.map((v, i) => {
+            return (
+              <motion.h1 key={i} variants={itemVariants} className='pl-5'>
+                {v}
+              </motion.h1 >
+            )
+          })}
+        </motion.div>
         <motion.h1 className="font-extrabold hidden sm:block" variants={itemVariants}>
           .technicalExperiences
         </motion.h1>
