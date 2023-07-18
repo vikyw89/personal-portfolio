@@ -1,11 +1,9 @@
-'use client'
+import IsLoading from '../loading'
 
 export default function Test() {
-
   return (
-    <div className='bg-green-600 inset-0 fixed'>
-
+    <div>
+      <IsLoading/>
     </div>
   )
 }
-
