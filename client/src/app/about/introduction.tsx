@@ -129,10 +129,10 @@ export const IntroductionComponent = () => {
         }}
         animate={{
           scaleY: [0, 0.02, 0.2, 0.2, 1],
-          scaleX: [0, 0, 1, 1, 1]
-        }}
-        transition={{
-          duration: 3
+          scaleX: [0, 0, 1, 1, 1],
+          transition: {
+            duration: 3
+          }
         }}
       >
         {new Array(5).fill(null).map((v, i) => {
