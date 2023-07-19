@@ -48,15 +48,15 @@ const data = [
     repoLink: 'https://github.com/vikyw89/useSyncV',
     videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FuseSyncVcompressed.webm?alt=media&token=89b0e67c-36cb-4dca-8c79-2ec9d2af13df'
   },
-  {
-    title: 'calculator',
-    year: '2022',
-    description: 'mobile web calculator app - with recursive EMDA operation',
-    tech: ['VanillaJS', 'CSS', 'HTML'],
-    liveLink: 'https://vikyw89.github.io/calculator/',
-    repoLink: 'https://github.com/vikyw89/calculator',
-    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FcalculatorCompressed.webm?alt=media&token=0d224592-6ac6-4712-b734-04e9677dd291'
-  },
+  // {
+  //   title: 'calculator',
+  //   year: '2022',
+  //   description: 'mobile web calculator app - with recursive EMDA operation',
+  //   tech: ['VanillaJS', 'CSS', 'HTML'],
+  //   liveLink: 'https://vikyw89.github.io/calculator/',
+  //   repoLink: 'https://github.com/vikyw89/calculator',
+  //   videoSrc: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/thumbnails%2FcalculatorCompressed.webm?alt=media&token=0d224592-6ac6-4712-b734-04e9677dd291'
+  // },
 ]
 
 export const ProjectCardContainer = () => {
