@@ -22,7 +22,7 @@ const wrapperVariants = {
     clipPath: ['inset(49% 49% 49% 49%)', 'inset(49% 0% 49% 0%)', 'inset(49.9% 0% 49.9% 0%)', 'inset(0% 0% 0% 0%)'],
     transition: {
       duration: 3,
-      times: [0.2, 0.4, 0.95, 1],
+      times: [0.2, 0.4, 0.90, 1],
       staggerChildren: 0.5
     },
   },
