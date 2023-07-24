@@ -25,7 +25,7 @@ export type CardProps = {
 export const Card = ({ props }: CardProps) => {
   const video = useRef(null) as any
   const [card, animate] = useAnimate()
-  const cardIsInView = useInView(card, { amount: 0.1 })
+  const cardIsInView = useInView(card, { amount: 0.2 })
   const videoIsInView = useInView(video, { margin: '-40%' })
 
   useEffect(() => {
@@ -42,18 +42,18 @@ export const Card = ({ props }: CardProps) => {
   }
 
   useEffect(() => {
-    const entryPosition = props.index % 2 ? '50vw' : '-50vw'
+    // const entryPosition = props.index % 2 ? '50vw' : '-50vw'
     if (cardIsInView) {
       animate(card.current,
         {
-          x: 0,
+          // x: 0,
           opacity: 1,
         })
     } else {
       animate(card.current,
         {
-          x: entryPosition,
-          opacity: 0,
+          // x: entryPosition,
+          opacity: 0.2,
         })
     }
   }, [card, cardIsInView, animate, props.index])
