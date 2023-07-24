@@ -13,7 +13,7 @@ const content = {
     gmail: 'vikyw89@gmail.com',
     whatsApp: `https://wa.me/+6281234001700?text=${encodeURIComponent('I found you from your portfolio site')}`,
     repo: 'https://github.com/vikyw89/personal-portfolio',
-    resume: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/030723_Daniel_Viky_Wahjoedin_Resume.pdf?alt=media&token=5e3a5a3a-6fb4-4c84-a1c8-81a18e8da169'
+    // resume: 'https://firebasestorage.googleapis.com/v0/b/portfolio-b5ad9.appspot.com/o/030723_Daniel_Viky_Wahjoedin_Resume.pdf?alt=media&token=5e3a5a3a-6fb4-4c84-a1c8-81a18e8da169'
   },
   backstory: 'someone with a mixed experience in architectural engineering and web developments',
   bio: {
@@ -173,7 +173,7 @@ export const IntroductionComponent = () => {
           </motion.h1>
         </motion.div>
         <motion.h1 className="font-extrabold hidden sm:block" variants={itemVariants}>
-          .technicalExperiences
+          .technicalExperience
         </motion.h1>
         <motion.div className="hidden sm:grid pl-5">
           {Object.entries(content.technicalExperience).map((v, i) => {
